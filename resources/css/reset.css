@@ -1,0 +1,117 @@
+/* font set */
+@import url("font.css");
+
+/* reset */
+* {
+    margin:0 auto;
+    padding:0;
+    font-family: 'NotoSansKR', sans-serif;
+    font-size:16px;
+    box-sizing:border-box;
+}
+
+*::after,
+*::before {
+    box-sizing:border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    line-height:1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #363738;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+main, header, nav, section, article, aside, footer, figure, figcaption, details, summary, i {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    margin: 0;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+}
+
+button, [role="button"], .btn {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 접근성 옵션 - 움직임 줄이기 설정 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
