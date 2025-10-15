@@ -67,4 +67,110 @@
     color:var(--read-color);
 }
 
+/* 메인 */
+.main-from{
+    width:100%;
+    padding-top:1.8125rem;
+
+}
+
+.main-from .main-menu{
+    width:100%;
+    max-width:30rem;
+    margin:0 auto;
+    background:#fff;
+    border-radius: 0.625rem;
+}
+
+.main-from .main-menu .title{
+    padding:1.375rem 1.9375rem 1rem 1.9375rem;
+    font-size:1.25rem;
+    font-weight:700;
+    color:var(--table-color);
+    border-bottom:0.125rem solid var(--focus-color);
+}
+
+.main-from .main-menu .menu-list{
+    padding:0.4375rem 0 1.5625rem 0;
+}
+
+.main-from .main-menu .menu-list .menu-con{
+    width:100%;
+    height:3.5rem;
+}
+
+.main-from .main-menu .menu-list .menu-con a{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width:100%;
+    height:100%;
+    font-size:1rem;
+    font-weight:500;
+    padding-left:2.9375rem;
+    color:var(--header-color);
+    border-bottom:0.0625rem solid #f6f8f9;
+}
+
+.main-from .main-menu .menu-list .menu-con:last-child a{
+    border-bottom:0;
+}
+
+.main-from .main-menu .menu-list .menu-con a::before{
+    content:"";
+    display:block;
+    width:0.1875rem;
+    height:0.1875rem;
+    border-radius: 0.1875rem;
+    background:var(--focus-color);
+    position:absolute;
+    left:2.1875rem;
+    top:1.6875rem;
+}
+
+.main-from .main-menu .menu-list .menu-con a:hover{
+    background:var(--read-color);
+    color:var(--white-color);
+}
+
+.main-from .main-menu .menu-list .menu-con a:hover::before{
+    background:var(--white-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
