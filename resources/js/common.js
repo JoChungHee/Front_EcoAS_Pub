@@ -60,4 +60,24 @@ $(document).ready(function(){
 
     // ### 로그인 카운트 END
 
+    // ### 공통 페이지 Tab Swiper
+    var swiper = new Swiper(".page-tab", {
+        slidesPerView: "auto",
+        spaceBetween: 0,
+        freeMode: true,
+    });
+
+    // ### 공통 페이지 Tab active 설정
+    $(".page-tab").each(function(){
+        var $tab = $(this);
+
+        $tab.on('click', '.page-tab-link', function(e){
+            e.preventDefault();
+            var $clicked = $(this);
+
+            $tab.find('.page-tab-link').removeClass('active');
+            $clicked.addClass('active');
+        });
+    });
+    
 });

@@ -282,13 +282,68 @@ header .header-bottom .out-box .login-count .time-extend{
     font-weight:700;
 }
 
+/* 컨텐츠 공통 */
 .contents{
     width:100%;
     padding:10.375rem 1.25rem 1.5rem 1.25rem;
 }
 
+.contents .page-title{
+    font-size:1.375rem;
+    color:var(--title-color);
+    font-weight:700;
+}
+
+.contents .page-tab{
+    width:100%;   
+    overflow: hidden;
+    border-bottom:0.0625rem solid #e5e9eb;
+    margin-top:2.375rem;
+}
 
 
+.contents .page-tab .page-tab-box{
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+
+.contents .page-tab .page-tab-box .page-tab-con{
+    width:max-content;
+}
+
+.contents .page-tab .page-tab-box .page-tab-con .page-tab-link{
+    font-size:0.875rem;
+    color:var(--table-color);
+    height:2.125rem;
+    position: relative;
+    padding:0 0.75rem;
+    white-space: nowrap;
+    display:flex;
+}
+
+.contents .page-tab .page-tab-box .page-tab-con .page-tab-link.active{
+    color:var(--focus-color);
+    font-weight:700;
+}
+
+.contents .page-tab .page-tab-box .page-tab-con .page-tab-link.active::before{
+    content:"";
+    display:block;
+    width:100%;
+    height:0.125rem;
+    background:var(--focus-color);
+    position: absolute;
+    left:0;
+    bottom:-0.0625rem;
+    z-index: 2;
+}
+
+.list-form{
+    width:100%;
+    margin-top:1.875rem;
+}
 
 
 
