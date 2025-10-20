@@ -1,0 +1,427 @@
+/* rem 단위 - 기존 common에 잡혀 있는 20px 기준 작업 */
+.my-form{
+    background:#fafafa;
+    width:100%;
+    height:100%;
+    min-height:100vh;
+}
+
+.my-form .my-main{
+    width:63rem;
+    margin:0 auto;
+    display:flex;
+}
+
+/* 좌측 contents */
+.my-form .my-main .my-info{
+    width:15.45rem;
+    padding-right:1.2rem;
+    margin-top:2rem;
+    border-right:0.05rem solid #ebebeb;
+}
+
+/* 사용자 정보 */
+.my-form .my-main .my-info .user-info{
+    width:100%;
+    background:#fff;
+    border:0.05rem solid #e0e0e0;
+    
+    border-radius: 0.25rem;
+    overflow:hidden;
+}
+
+.my-form .my-main .my-info .user-info .user-info-box{
+    width:100%;
+    padding:1.35rem 1.25rem 0.85rem 1.25rem;
+}
+
+.my-form .my-main .my-info .user-info .user-info-box .info-cont{
+    display:flex;
+    gap:0.55rem;
+}
+
+.my-form .my-main .my-info .user-info .user-info-box .info-cont + .info-cont{
+    margin-top:1rem;
+}
+
+.my-form .my-main .my-info .user-info .user-info-box .info-cont .title{
+    width:3.15rem;
+    font-weight:700;
+    font-size:0.75rem;
+    color:#646464; 
+    word-break: keep-all;
+    line-height:1.2;
+    letter-spacing: -0.4px;
+}
+
+.my-form .my-main .my-info .user-info .user-info-box .info-cont .txt{
+    width:calc( 100% - 3.7rem );
+    word-break: keep-all;
+    font-size:0.75rem;
+    color:#757575;
+    line-height:1.2;
+    letter-spacing: -0.4px;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+
+.my-form .my-main .my-info .user-info .user-info-box .info-cont .txt .center-call-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:1.3rem;
+    height:1.3rem;
+    border-radius: 0.25rem;
+    background:#eaf6f6;
+}
+
+.my-form .my-main .my-info .user-info .user-info-btn{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-top:0.05rem solid #e0e0e0;
+    height:1.75rem;
+    background:#fafafa;
+    font-size:0.7rem;
+    color:#646464;
+    gap:0.45rem;
+    cursor: pointer;
+}
+
+.my-form .my-main .my-info .user-info .user-info-btn::after{
+    content: "";
+    display:block;
+    width:0.5rem;
+    height:0.5rem;
+    background:url(../images/myLoung/info_arrow.png) no-repeat center;
+    transform: rotate(180deg);
+    transition: all 0.2s;
+}
+
+.my-form .my-main .my-info .user-info .user-info-btn.show::after{
+    transform: rotate(0deg);
+}
+
+.my-form .my-main .my-info .user-info .user-info-box .info-cont:nth-child(n+5) {
+  display: none;
+}
+
+.my-form .my-main .my-info .user-info .user-info-box.show .info-cont:nth-child(n+5) {
+  display: flex;
+}
+
+/* 관리표작성 대표업종 */
+.my-form .my-main .my-info .business-type{
+    width:100%;
+    padding:1.25rem 0.5rem;
+    border-bottom: 0.05rem solid #e0e0e0;
+}
+
+.my-form .my-main .my-info .business-type .title{
+    text-align: center;
+    font-size:0.8rem;
+    font-weight: 700;
+    color:#646464;
+}
+
+.my-form .my-main .my-info .business-type .type-cont{
+    width:100%;
+    display:flex;
+    align-items: center;
+    margin-top:0.5rem;
+    gap:0.65rem;
+}
+
+.my-form .my-main .my-info .business-type .type-cont .type-select{
+    width:calc( 100% - 2.15rem );
+    border:0.05rem solid #dbdbdb;
+    height:1.5rem;
+    font-size:0.8rem;
+    background:#fff;
+    color:#757575;
+    padding:0 0.55rem;
+}
+
+.my-form .my-main .my-info .business-type .type-cont .type-select option{
+    font-size:0.8rem;
+    color:#757575;
+}
+
+.my-form .my-main .my-info .business-type .type-cont .change-btn{
+    width:2.3rem;
+    height:1.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    background:#53b0ae;
+    color:#fff;
+    font-size:0.7rem;
+    font-weight:500;
+}
+
+/* 공지사항 영역 */
+.my-form .my-main .my-info .main-notice{
+    padding:2rem 0.75rem 2rem 1.3rem;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box{
+    width:100%;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box + .notice-box{
+    margin-top:2.75rem;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .title{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .title .txt{
+   font-size: 0.9rem;
+   font-weight: 700;
+   color:#212121;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .title .notice-link{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:1rem;
+    height:1rem;
+    background:url(../images/myLoung/link_ico.png) no-repeat center;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .title .notice-link:hover{
+    background:url(../images/myLoung/link_ico_hover.png) no-repeat center;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .notice-con{
+    margin-top:1.1rem;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .notice-con .notice-list{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap:0.8rem;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .notice-con .notice-list a .notice-title{
+    padding-left:0.6rem;
+    position:relative;
+    font-size:0.75rem;
+    color:#757575;
+    font-weight:500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .notice-con .notice-list a .notice-title::before{
+    content:"";
+    display:block;
+    width:0.25rem;
+    height:0.25rem;
+    border-radius: 0.25rem;
+    background:#616161;
+    position: absolute;
+    left:0;
+    top:0.3rem;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .notice-con .notice-list a:hover .notice-title{
+    color:#212121;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .notice-con .notice-list a .notice-date{
+    padding-left:0.6rem;
+    font-size:0.75rem;
+    color:#828282;
+    margin-top:0.1rem;
+}
+
+.my-form .my-main .my-info .main-notice .notice-box .notice-con .notice-none{
+    font-size:0.75rem;
+    color:#757575;
+    font-weight:500;
+}
+
+/* 우측 contents */
+.my-form .my-main .my-cont{
+    width:calc( 100% - 15.45rem );
+}
+
+.my-form .my-main .my-cont .my-cont-type{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap:1rem;
+}
+
+.my-form .my-main .my-cont .my-cont-type .cont-type-box{
+    display:flex;
+    align-items: center;
+}
+
+.my-form .my-main .my-cont .my-cont-type .cont-type-box input[type="radio"]{
+    display:none;
+}
+
+.my-form .my-main .my-cont .my-cont-type .cont-type-box label{
+    display:flex;
+    align-items: center;
+    gap:0.35rem;
+}
+
+.my-form .my-main .my-cont .my-cont-type .cont-type-box label i{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:1rem;
+    height:1rem;
+    border-radius: 1rem;
+    border:0.05rem solid #dbdbdb;
+    background:#fff;
+}
+
+.my-form .my-main .my-cont .my-cont-type .cont-type-box label i::before{
+    content:"";
+    display:block;
+    width:0.5rem;
+    height:0.5rem;
+    border-radius: 0.5rem;
+    background:#dcdcdc;
+}
+
+.my-form .my-main .my-cont .my-cont-type .cont-type-box label span{
+    font-size:0.7rem;
+    font-weight:700;
+    color:#212121;
+}
+
+.my-form .my-main .my-cont .my-cont-type .cont-type-box input[type="radio"]:checked + label i{
+    background:#53b0ae;
+    border:0.05rem solid #53b0ae;
+}
+
+.my-form .my-main .my-cont .my-cont-type .cont-type-box input[type="radio"]:checked + label i::before{
+    content:"";
+    display:block;
+    width:0.4rem;
+    height:0.4rem;
+    border-radius: 0.4rem;
+    background:#fff;
+}
+
+.my-form .my-main .my-cont .my-cont-form{
+    padding:1rem 0 0 1.2rem;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box{
+    width:100%;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box + .my-cont-box{
+    margin-top:2.1rem;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .title{
+    display:flex;
+    align-items: center;
+    gap:1.05rem;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .title .txt{
+    font-size:1.05rem;
+    color:#212121;
+    font-weight:700;
+    position:relative;
+    padding-left:1rem;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .title .txt::before{
+    content:"";
+    display:block;
+    width:0.4rem;
+    height:0.4rem;
+    border-radius: 0.4rem;
+    background:#e74c3c;
+    position: absolute;
+    left:0;
+    top:0.3rem;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .mark-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .mark-btn input[type="checkbox"]{
+    display:none;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .mark-btn label{
+    cursor: pointer;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .mark-btn label i{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:1.1rem;
+    height:1.1rem;
+    background:url(../images/myLoung/bookmark_star_off.png) no-repeat center;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .mark-btn label:hover i{
+    background:url(../images/myLoung/bookmark_star_hover.png) no-repeat center;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-title .mark-btn input[type="checkbox"]:checked + label i{
+    background:url(../images/myLoung/bookmark_star_on.png) no-repeat center;
+}
+
+.my-form .my-main .my-cont .my-cont-form .my-cont-box .my-cont-con{
+    width:100%;
+    background:#fff;
+    border:0.05rem solid #e0e0e0;
+    border-radius: 0.25rem;
+    margin-top:0.6rem;
+    padding:1.5rem 1.25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

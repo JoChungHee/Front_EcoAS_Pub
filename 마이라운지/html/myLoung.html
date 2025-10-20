@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이라운지</title>
+
+    <!-- 기존 css 연동 -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+
+    <!-- 신규 css 연동 #####
+        신규 마이라운지 해당 css 적용 
+    -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/new_content.css" />
+
+    <!-- 기본 js 연동 -->
+    <script src="../resources/js/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <!-- 기존 소스기준 #####
+        [ 적용 위치 ]
+        id="ctn" class="sub_wrap" 안에 적용
+        sut_top_ttl_wrap 아래 부분에 적용
+
+        [ 작업 방식 변경 ]
+        - 기존 시멘틱 테그 css 충돌 위험성
+        - 시멘틱 테그 > div 로 변경 작업 ( css 충돌 방지 )
+        - 기존 class 사용 안함 > 신규 class 작업 ( css 충돌 방지 )
+        - 기존 class명 스네이크 케이스 > 케밥 케이스 변경 ( class 충돌 방지 )
+    -->
+
+    <!-- contents start -->
+    <div class="my-form">
+        <div class="my-main">
+            <!-- 좌측 lnb -->
+            <div class="my-info">
+                <!-- 접속자 정보 -->
+                <div class="user-info">
+                    <ul class="user-info-box">
+                        <li class="info-cont">
+                            <div class="title">담당자</div>
+                            <div class="txt">안ㅇㅇ</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">업체명</div>
+                            <div class="txt">(주)자몽전자</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">업체업종</div>
+                            <div class="txt">제조업, 수입업, 푸시업, 재활용업</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">관할지사</div>
+                            <div class="txt">
+                                수도권서부환경본부
+                                <button type="button" class="center-call-btn">
+                                    <img src="../resources/images/myLoung/call_ico.png"/>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">업체ID</div>
+                            <div class="txt">22222212345</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">업체 전화번호</div>
+                            <div class="txt">032-567-3636</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">사업자 등록번호</div>
+                            <div class="txt">123-12-12345</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">사업장 (우편물) 주소</div>
+                            <div class="txt">12345 인천광역시 서구 이리로3길 50 (이리동) 123동 12345호</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">담당자 전화번호</div>
+                            <div class="txt">032-567-3636</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">담당자 휴대전화</div>
+                            <div class="txt">010-1234-5678</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">담당자 이메일</div>
+                            <div class="txt">jaewon@an.com</div>
+                        </li>
+                        <li class="info-cont">
+                            <div class="title">인증서 정보</div>
+                            <div class="txt">
+                                cn=(주)자몽전자
+                                (jamongelectro)00310202
+                                009061931000163,ou=hG
+                                B,ou=corporatioro=yessig
+                                n,c=kr
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" onclick="userInfoBtnSet()" class="user-info-btn" >
+                        상세정보
+                    </button>
+                </div>
+
+                <!-- 대표업종 선택 -->
+                <div class="business-type">
+                    <div class="title">관리표작성 대표업종</div>
+                    <div class="type-cont">
+                        <select class="type-select">
+                            <option>제조업</option>
+                        </select>
+                        <button type="button" class="change-btn" >변경</button>
+                    </div>
+                </div>
+
+                <!-- 공지사항 리스트 -->
+                <div class="main-notice">
+                    <!-- loop -->
+                    <div class="notice-box">
+                        <div class="title">
+                            <div class="txt">최근 알림메세지</div>
+                            <a href="" class="notice-link"></a>
+                        </div>
+                        <div class="notice-con">
+                            <div class="notice-list">
+                                <!-- loop -->
+                                <a href="" class="list-con">
+                                    <div class="notice-title">2025103 알림메세지 email 테스트 메일 2025103 알림메세지 email 테스트 메일</div>
+                                    <div class="notice-date">2025-01-03</div>
+                                </a>
+                                <!-- loop end -->
+
+                                <a href="" class="list-con">
+                                    <div class="notice-title">2025103 알림메세지 email 테스트 메일</div>
+                                    <div class="notice-date">2025-01-03</div>
+                                </a>
+                            </div>
+
+                            <!-- 없을 경우 -->
+                            <div class="notice-none">조회된 모록이 없습니다.</div>
+                        </div>
+                    </div>
+                    <!-- loop end -->
+
+                     <!-- loop -->
+                    <div class="notice-box">
+                        <div class="title">
+                            <div class="txt">공지사항</div>
+                            <a href="" class="notice-link"></a>
+                        </div>
+                        <div class="notice-con">
+                            <div class="notice-list">
+                                <!-- loop -->
+                                <a href="" class="list-con">
+                                    <div class="notice-title">공지사항 내용 내용 내용</div>
+                                    <div class="notice-date">2025-02-01</div>
+                                </a>
+                                <!-- loop end -->
+                                 
+                                <a href="" class="list-con">
+                                     <div class="notice-title">공지사항 내용 내용 내용</div>
+                                    <div class="notice-date">2025-02-01</div>
+                                </a>
+                            </div>
+
+                            <!-- 없을 경우 -->
+                            <div class="notice-none">조회된 모록이 없습니다.</div>
+                        </div>
+                    </div>
+                    <!-- loop end -->
+
+                     <!-- loop -->
+                    <div class="notice-box">
+                        <div class="title">
+                            <div class="txt">MY 온라인상담</div>
+                            <a href="" class="notice-link"></a>
+                        </div>
+                        <div class="notice-con">
+                            <div class="notice-list">
+                                <!-- loop -->
+                                <a href="" class="list-con">
+                                    <div class="notice-title">온라인상담 내용 내용 내용 내용</div>
+                                    <div class="notice-date">2025-10-10</div>
+                                </a>
+                                <!-- loop end -->
+                                 
+                                <a href="" class="list-con">
+                                    <div class="notice-title">온라인상담 내용 내용 내용 내용</div>
+                                    <div class="notice-date">2025-10-10</div>
+                                </a>
+                            </div>
+
+                            <!-- 없을 경우 -->
+                            <div class="notice-none">조회된 모록이 없습니다.</div>
+                        </div>
+                    </div>
+                    <!-- loop end -->
+                </div>
+            </div>
+
+            <!-- 우측 contents -->
+            <div class="my-cont">
+                <!-- 컨텐츠 보기 설정 -->
+                <div class="my-cont-type">
+                    <div class="cont-type-box">
+                        <input type="radio" name="contType" id="contAll" checked />
+                        <label for="contAll">
+                            <i></i>
+                            <span>전체 보기</span>
+                        </label>
+                    </div>
+
+                    <div class="cont-type-box">
+                        <input type="radio" name="contType" id="contBookMark" />
+                        <label for="contBookMark">
+                            <i></i>
+                            <span>즐겨찾기 보기</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 컨텐츠 -->
+                <div class="my-cont-form">
+                    <!-- loop -->
+                    <div class="my-cont-box">
+                        <!-- 상단 타이틀 -->
+                        <div class="my-cont-title">
+                            <div class="title">
+                                <div class="txt">재활용의무이행</div>
+                            </div>
+                            <div class="mark-btn">
+                                <input type="checkbox" name="bookMark" id="bookMarkMenu01" />
+                                <label for="bookMarkMenu01">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 컨텐츠 내용 -->
+                        <div class="my-cont-con">
+                            <div class="cont-info"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <!-- contents end -->
+
+    <!-- 마이라운지 사용 js -->
+    <script>
+        /* 마이라운지 유저 정보 상세보기 */
+        function userInfoBtnSet(){
+            const userInfo = document.querySelector('.user-info-box');
+            const btn = document.querySelector('.user-info-btn');
+            
+            userInfo.classList.toggle('show');
+            btn.classList.toggle('show');
+        }
+    </script>
+
+
+
+</body>
+</html>
