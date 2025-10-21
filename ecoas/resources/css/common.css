@@ -148,6 +148,8 @@ header .header-top{
     align-items: center;
     justify-content: space-between;
     width:100%;
+    max-width:1200px;
+    margin:0 auto;
 }
 
 header .header-top .logo-box{
@@ -199,10 +201,11 @@ header .header-top .user-box::before{
 
 header .header-bottom{
     width:100%;
-    margin-top:1.4375rem;
+    margin:1.4375rem auto 0 auto;
     display:flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+    max-width:1200px;
 }
 
 header .header-bottom .menu-box{
@@ -286,6 +289,8 @@ header .header-bottom .out-box .login-count .time-extend{
 .contents{
     width:100%;
     padding:10.375rem 1.25rem 1.5rem 1.25rem;
+    max-width:1200px;
+    margin:0 auto;
 }
 
 .contents .page-title{
