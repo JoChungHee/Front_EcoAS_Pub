@@ -55,7 +55,7 @@
                             <div class="title">관할지사</div>
                             <div class="txt">
                                 수도권서부환경본부
-                                <button type="button" class="center-call-btn">
+                                <button onclick="centerListPopOpen()" type="button" class="center-call-btn">
                                     <img src="../resources/images/myLoung/call_ico.png"/>
                                 </button>
                             </div>
@@ -139,7 +139,7 @@
                             </div>
 
                             <!-- 없을 경우 -->
-                            <div class="notice-none">조회된 모록이 없습니다.</div>
+                            <div class="notice-none">조회된 목록이 없습니다.</div>
                         </div>
                     </div>
                     <!-- loop end -->
@@ -166,7 +166,7 @@
                             </div>
 
                             <!-- 없을 경우 -->
-                            <div class="notice-none">조회된 모록이 없습니다.</div>
+                            <div class="notice-none">조회된 목록이 없습니다.</div>
                         </div>
                     </div>
                     <!-- loop end -->
@@ -193,7 +193,7 @@
                             </div>
 
                             <!-- 없을 경우 -->
-                            <div class="notice-none">조회된 모록이 없습니다.</div>
+                            <div class="notice-none">조회된 목록이 없습니다.</div>
                         </div>
                     </div>
                     <!-- loop end -->
@@ -231,7 +231,7 @@
                                 <div class="txt">재활용의무이행</div>
                             </div>
                             <div class="mark-btn">
-                                <input type="checkbox" name="bookMark" id="bookMarkMenu01" />
+                                <input type="checkbox" name="bookMark" id="bookMarkMenu01" checked />
                                 <label for="bookMarkMenu01">
                                     <i></i>
                                 </label>
@@ -240,9 +240,746 @@
 
                         <!-- 컨텐츠 내용 -->
                         <div class="my-cont-con">
-                            <div class="cont-info"></div>
+                            <!-- 회색 박스 컨텐츠
+                                경우의 수 1개 밖에 없어서 추후 추가시 퍼블 커스텀 필요
+                                템플릿작업 불가
+                            -->
+                            <div class="cont-summary">
+                                <table class="summary-tbl">
+                                    <colgroup>
+                                        <col width="40%"/>
+                                        <col width="20%"/>
+                                        <col width="20%"/>
+                                        <col width="20%"/>
+                                    </colgroup>
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>의무이행연도</th>
+                                        <th>제출기한</th>
+                                        <th>제출여부</th>
+                                    </tr>
+                                    <tr>
+                                        <td>재활용의무이행계획서</td>
+                                        <td>2025년</td>
+                                        <td>2025.01.31</td>
+                                        <td>
+                                            <span class="red-txt">미제출</span>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td>출고수입실적서</td>
+                                        <td>2025년</td>
+                                        <td>2025.04.15</td>
+                                        <td>
+                                            <span class="blue-txt">제출</span>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <div class="summary-txt">
+                                    텍스트 내용 입력 텍스트 내용 입력 텍스트 내용 입력 텍스트 내용 입력 텍스트 내용 입력 텍스트 내용 입력
+                                </div>
+                            </div>
+                            
+                            <!-- 타이틀만 있는 컨텐츠 -->
+                            <div class="cont-title">
+                                <ul class="title-con-list">
+                                    <li class="title-con">
+                                        <div class="title">
+                                            조회대상 : 2025년
+                                        </div>
+                                        <div class="con">
+                                            <button type="button" class="calculator-btn">
+                                                예상부과금계산기
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="title-con">
+                                        <div class="title">
+                                            재활용의무량 :
+                                        </div>
+                                        <div class="con">
+                                            <button type="button" class="focus-btn">
+                                                조회
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 카드 컨텐츠 -->
+                            <ul class="cont-card">
+                                <!-- 카드 loop -->
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- 카드 loop end -->
+
+
+                                <!-- #### 이후 예시 #### -->
+
+                                 <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                 <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                 <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                 <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                               
+                            </ul>
                         </div>
                     </div>
+
+
+                    <div class="my-cont-box">
+                        <!-- 상단 타이틀 -->
+                        <div class="my-cont-title">
+                            <div class="title">
+                                <div class="txt">두번째 컨텐츠 샘플</div>
+                                <div class="title-btn">
+                                    <span>대제목에 대한 메세지 출력</span>
+                                    <button type="button" class="focus-btn">
+                                        버튼
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mark-btn">
+                                <input type="checkbox" name="bookMark" id="bookMarkMenu02" />
+                                <label for="bookMarkMenu02">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 컨텐츠 내용 -->
+                        <div class="my-cont-con">
+                            <!-- 카드 컨텐츠 -->
+                            <ul class="cont-card">
+                                <!-- 카드 loop -->
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- 카드 loop end -->
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="my-cont-box">
+                        <!-- 상단 타이틀 -->
+                        <div class="my-cont-title">
+                            <div class="title">
+                                <div class="txt">세번째 컨텐츠 샘플</div>
+
+                                <div class="title-btn">
+                                    <span>대제목에 대한 메세지 출력</span>
+                                    <button type="button" class="focus-btn">
+                                        버튼
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mark-btn">
+                                <input type="checkbox" name="bookMark" id="bookMarkMenu03" />
+                                <label for="bookMarkMenu03">
+                                    <i></i>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 컨텐츠 내용 -->
+                        <div class="my-cont-con">
+                            <!-- 카드 컨텐츠 -->
+                            <ul class="cont-card">
+                                <!-- 카드 loop -->
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- 카드 loop end -->
+
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="card-list">
+                                    <div class="card-title">
+                                        환경부고시<br>
+                                        (조회대상:2025년)
+                                    </div>
+                                    <ul class="card-box">
+                                        <!-- 컨텐츠 loop -->
+                                        <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                        <!-- 컨텐츠 loop end -->
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+
+                                         <li class="card-con">
+                                            <div class="card-con-title">
+                                                1인당 재활용목표량
+                                            </div>
+                                            <div class="card-con-txt">
+                                                8.23kg
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -250,8 +987,79 @@
     </div>
     <!-- contents end -->
 
+    <!-- layer pop -->
+    <div class="layer-pop" id="centerListPop">
+        <div class="layer-box">
+            <div class="layer-head">
+                <div class="title">담당지역 고객센터</div>
+                <button type="button" class="close-ico-btn" onclick="layerPopClose()">
+                    <img src="../resources/images/myLoung/pop_close_ico.png"/>
+                </button>
+            </div>
+            <div class="layer-body">
+                <!-- 팝업 컨텐츠 작성 -->
+
+                <div class="layer-con-title">
+                    수도권서부환경본부
+                </div>
+                
+                <!-- 고갹센터 예시 컨텐츠 -->
+                <div class="pop-center-list">
+                    <table>
+                        <colgroup>
+                            <col width="*"/>
+                        </colgroup>
+                        <tr>
+                            <th>전기전자제품</th>
+                            <td>홍ㅇㅇ</td>
+                            <td>000-0000-0000</td>
+                        </tr>
+                        <tr>
+                            <th>사전예방, 자동차</th>
+                            <td>홍ㅇㅇ</td>
+                            <td>000-0000-0000</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="layer-footer">
+                <div class="layer-btn-box">
+                    <button type="button" class="focus-btn" onclick="layerPopClose()">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- layer pop end -->
+
     <!-- 마이라운지 사용 js -->
     <script>
+        $(document).ready(function(){
+            //전체보가, 즐겨찾기 보기 제어
+            $("input[name='contType']").on('change', function(){
+                var contTypeId = $(this).attr('id');
+                var bookMark = $("input[name='bookMark']");
+
+                if(contTypeId === 'contBookMark'){
+                    bookMark.filter(':checked').each(function(){
+                        $(this).closest('.my-cont-box').show();
+                    });
+
+                    bookMark.not(':checked').each(function() {
+                        $(this).closest('.my-cont-box').hide();
+                    });
+
+                }else{
+                    $('.my-cont-box').show();
+                }
+
+            });
+
+
+        });
+
         /* 마이라운지 유저 정보 상세보기 */
         function userInfoBtnSet(){
             const userInfo = document.querySelector('.user-info-box');
@@ -259,6 +1067,16 @@
             
             userInfo.classList.toggle('show');
             btn.classList.toggle('show');
+        }
+        
+        /* 관할지사 팝업 오픈 */
+        function centerListPopOpen(){
+            $("#centerListPop").fadeIn();
+        }
+
+        /* 공통 레이어 팝업 종료 */
+        function layerPopClose(){
+            $(".layer-pop").fadeOut();
         }
     </script>
 
