@@ -80,4 +80,51 @@ $(document).ready(function(){
         });
     });
     
+    /* 리스트 테이블 전체선택 check 공통 */
+    $(".check-all").on('change', function(){
+        var thisName = $(this).attr("name");
+        var checkName = thisName.replace("All", "");
+
+        $("input[name='" + checkName +"']").prop("checked", $(this).prop("checked"));
+    });
+
+    $(".check-con").on("change", function(){
+        var checkConName = $(this).attr("name");
+        var checkAllBox = $("input[name='" + checkConName + "All']");
+        var checkTotal = $("input[name='" + checkConName + "']").length;
+        var checkedCon = $("input[name='" + checkConName + "']:checked").length;
+
+        checkAllBox.prop("checked", checkTotal === checkedCon);
+    });
+
+    /* list table 위치 계산 */
+    listTblHeightSet();
+
+    $(window).resize(function(){
+        listTblHeightSet();
+    });
+
 });
+
+/* 공통 list table filter on/off */
+function listTblSearch(){
+    $(".list-tbl .tbl-filter").toggleClass('active');
+}
+
+/* list table 위치 계산 */
+function listTblHeightSet(){
+    if ($(".list-tbl-box").length) {
+        var headerHeight = $(".header-form").outerHeight(true) || 0;
+        var pageTitleHeight = $(".contents .page-title").outerHeight(true) || 0;
+        var pageTabHeight = $(".contents .page-tab").outerHeight(true) || 0;
+        var listTopHeight = $(".list-form .list-top").outerHeight(true) || 0;
+
+        var windowHeight = $(window).height();
+        var listBoxHeight = windowHeight - (headerHeight + pageTitleHeight + pageTabHeight + listTopHeight + 89);
+
+        $(".list-tbl-box").css("height", listBoxHeight + "px");
+    }
+
+}
+
+

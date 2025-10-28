@@ -60,6 +60,25 @@ body {
     gap:0.5rem;
 }
 
+.btn-box{
+    display:flex;
+    align-items: center;
+    gap:0.25rem;
+}
+
+.btn-box.ico-type{
+    gap:1.5625rem;
+}
+
+.btn-focus.search-btn::before{
+    content:"";
+    display:block;
+    width:0.875rem;
+    height:0.875rem;
+    background:url(../images/common/search_ico_w.png) no-repeat center;
+    background-size:contain;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="number"],
@@ -108,14 +127,55 @@ input[type="email"]{
     transition: all 0.2s;
 }
 
+/* check box */
+.check-form{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:0.625rem 1.25rem;
+}
 
+.check-box input[type="checkbox"]{
+    display:none;
+}
 
+.check-box label{
+    display:flex;
+    align-items: center;
+}
 
+.check-box label i{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height:1rem;
+    border:0.0625rem solid var(--line-color);
+    border-radius: 0.25rem;
+}
 
+.check-box label i:hover{
+    border:0.0625rem solid var(--header-color);
+}
 
+.check-box input[type="checkbox"]:checked + label i{
+    border:0.0625rem solid var(--focus-color);
+    background:var(--focus-color);
+}
 
+.check-box input[type="checkbox"]:checked + label i::before{
+    content:"";
+    display:block;
+    width:0.625rem;
+    height:0.625rem;
+    background:url(../images/common/chekc_ico.png) no-repeat center;
+    background-size: contain;
+}
 
-
+.check-box label span{
+    font-size:0.8125rem;
+    color:var(--table-color);
+}
 
 
 
@@ -349,6 +409,161 @@ header .header-bottom .out-box .login-count .time-extend{
     width:100%;
     margin-top:1.875rem;
 }
+
+/* table */
+.list-tbl-box{
+    width:100%;
+    overflow-y: auto;
+    border-radius: 0.3125rem;
+    border:0.0625rem solid var(--line-color); 
+    background:var(--white-color);
+}
+
+.list-tbl{
+    width:100%;
+}
+
+.list-tbl tr th{
+    height:3.125rem;
+    text-align: center;
+    font-size:0.8125rem;
+    color:var(--table-color);
+    font-weight:700;
+    border-right:0.0625rem solid var(--line-color);
+    border-bottom:0.0625rem solid var(--line-color);
+}
+
+.list-tbl tr td{
+    height:3.125rem;
+    text-align: center;
+    font-size:0.8125rem;
+    color:var(--table-color);
+    border-right:0.0625rem solid var(--line-color);
+    border-bottom:0.0625rem solid var(--line-color);
+    padding:0 0.625rem;
+}
+
+.list-tbl tr td .tbl-search-btn{
+    width:0.875rem;
+    display:block;
+    margin:0 auto;
+}
+
+.list-tbl tr td .tbl-search-btn img{
+    width:100%;
+}
+
+.list-tbl tr th:last-child,
+.list-tbl tr td:last-child{
+    border-right:0;
+}
+
+.list-tbl .check-box label i{
+    margin:0 auto;
+}
+
+.list-tbl tr:last-child td{
+    border-bottom:0;
+}
+
+.list-tbl tr.tbl-filter{
+    background:var(--table-gray-bg);
+    display: none;
+}
+
+.list-tbl tr.tbl-filter.active{
+    display:table-row;
+}
+
+.list-tbl tr.tbl-filter .filter-comment-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height:1rem;
+    border:0.0625rem solid var(--line-color);
+    border-radius: 0.25rem;
+    background:var(--white-color);
+    font-size:0.8125rem;
+    color:var(--table-color);
+    margin:0 auto;
+}
+
+.list-tbl tr.tbl-filter .filter-con{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-cancle{
+    font-size:0.8125rem;
+    color:var(--table-color);
+    padding:0 0.125rem;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-search{
+    width:0.75rem;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-canlendar{
+    width:0.75rem;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-select-box{
+    width:100%;
+    position:relative;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-select-box::before{
+    content:"";
+    display:block;
+    width:0.5625rem;
+    height:0.5625rem;
+    background:url(../images/common/tbl_select_arrow.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    left:0;
+    top:50%;
+    transform: translate( -0, -50% );
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-select-box .filter-select{
+    width:100%;
+    font-size:0.8125rem;
+    color:var(--table-color);
+    padding-left:1.25rem;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-select-box .filter-select option{
+    font-size:0.8125rem;
+    color:var(--table-color);
+}
+
+.list-tbl tr.tbl-filter td:last-child .filter-con .filter-cancle{
+    margin:0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

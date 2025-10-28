@@ -98,9 +98,704 @@
 
             <!-- 리스트 테이블 -->
             <div class="list-form">
-                <div class="tbl-top">
-                    <div class=""></div>
-                    <div class=""></div>
+                <!-- 테이블 상단 버튼 영역 -->
+                <div class="list-top">
+                    <div class="left-box btn-box ico-type">
+                        <a href="" class="write-btn" >
+                            <span>신규작성</span>
+                        </a>
+                        <a href="" class="delete-btn" >
+                            <span>삭제</span>
+                        </a>
+                    </div>
+                    <div class="right-box btn-box">
+                        <a href="" class="btn btn-white" >
+                            <span>엑셀다운로드</span>
+                        </a>
+                        <a href="" class="btn btn-white" >
+                            <span>리포트출력</span>
+                        </a>
+                        <a href="javascript:listTblSearch();" class="btn btn-focus search-btn" >
+                            <span>검색</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 테이블 상단 버튼 영역 end -->
+
+                <div class="list-tbl-box">
+                    <table class="list-tbl">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="check-box">
+                                        <!-- 
+                                            전체선택 공통
+                                            
+                                            1. 전체선택 name = 일반선택name + All
+                                               ex) noticeCheck = noticeCheckAll
+                                                   commentCheck = commentCheckAll
+
+                                            2. 하위 선택자 name들은 모두 같은 값 및 check-con 클레스 필수
+
+                                            3. 전체선택 class 값 check-all 필수
+
+                                            4. common.js 공통 check 확인
+
+                                        -->
+                                        <input type="checkbox" id="listAllCheck" class="check-all" name="listCheckAll" />
+                                        <label for="listAllCheck">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>
+                                    이행년도
+                                </th>
+                                <th>
+                                    업체명
+                                </th>
+                                <th>
+                                    사업자번호
+                                </th>
+                                <th>
+                                    관할지역
+                                </th>
+                                <th>
+                                    조사일시
+                                </th>
+                                <th>
+                                    조사시간
+                                </th>
+                                <th>
+                                    상세
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- tbl filter -->
+                            <tr class="tbl-filter">
+                                <td>
+                                    <button class="filter-comment-btn">?</button>
+                                </td>
+                                <td>
+                                    <div class="filter-con">
+                                        <button class="filter-cancle">
+                                            X
+                                        </button>
+                                        <button class="filter-search">
+                                            <img src="../../../resources/images/common/search_ico_b.png"/>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="filter-con">
+                                        <button class="filter-cancle">
+                                            X
+                                        </button>
+                                        <button class="filter-search">
+                                            <img src="../../../resources/images/common/search_ico_b.png"/>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="filter-con">
+                                        <button class="filter-cancle">
+                                            X
+                                        </button>
+                                        <button class="filter-search">
+                                            <img src="../../../resources/images/common/search_ico_b.png"/>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="filter-con">
+                                        <div class="filter-select-box">
+                                            <select class="filter-select">
+                                                <option>선택</option>
+                                            </select >
+                                        </div>
+                                    
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="filter-con">
+                                        <button class="filter-cancle">
+                                            X
+                                        </button>
+                                        <button class="filter-canlendar">
+                                            <img src="../../../resources/images/common/calendar_ico.png"/>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="filter-con">
+                                        <button class="filter-cancle">
+                                            X
+                                        </button>
+                                        <button class="filter-search">
+                                            <img src="../../../resources/images/common/search_ico_b.png"/>
+                                        </button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="filter-con">
+                                        <button class="filter-cancle">
+                                            X
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- tbl filter end -->
+
+                            <!-- loop -->
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck01" class="check-con" name="listCheck" />
+                                        <label for="listCheck01">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- loop end -->
+
+                            <!-- sample data start -->
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="check-box">
+                                        <input type="checkbox" id="listCheck02" class="check-con" name="listCheck" />
+                                        <label for="listCheck02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    2025
+                                </td>
+                                <td>
+                                    (주)판도라
+                                </td>
+                                <td>
+                                    840-81-00687
+                                </td>
+                                <td>
+                                    수도권서부환경본부
+                                </td>
+                                <td>
+                                    2025-09-25
+                                </td>
+                                <td>
+                                    23:23
+                                </td>
+                                <td>
+                                    <a href="" class="tbl-search-btn">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
+                                    </a>
+                                </td>
+                            </tr>
+                            <!-- sample data end -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
