@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.file_input_hidden {
+    position: absolute; 
+    right: 0px; 
+    top: 0px; 
+    opacity: 0; 
+    
+    filter: alpha(opacity=0); 
+    -ms-filter: "alpha(opacity=0)"; 
+    -khtml-opacity: 0; 
+    -moz-opacity: 0;
+}
+div.btn_right{float:right;display:inline;}
+ul.b_inline li{float:left;display:inline;padding-left:5px;}
+ul.b_inline li.pd_bot{padding-bottom:5px;}
+div.source {float:right;display:inline; color:#666;}

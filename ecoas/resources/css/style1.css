@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* container */
+.sub_p .cts1 {width:1000px; margin:0 auto; padding:25px 0 40px 0; }
+.sub_p div.admin .cts1 {float:left; width:810px; margin-left:190px;}
+
+.title3 {padding-left:20px; color:#000; font-size:15px; font-weight:normal; background:url(../images/bl_7.gif) no-repeat left center; margin-top: 8px;}
+
+/* 회원가입 - 회원가입 약관 */
+div.agreement_check {width:100%; }
+
+div.agreement_check div.agreement_check_box { 	float:left; 	display:inline; 	width:940px; 	padding:29px; 	border:1px solid #d8d8d8; 	background:#f9f9f9; 	margin-top:15px; }
+div.agreement_check div.agreement { 	float:left; 	display:inline; 	width:100%; 	padding-top:18px; 	margin-top:18px; 	border-top:1px dashed #bababa; }
+div.agreement_check div.agreement:first-child { 	padding-top:0; 	margin-top:0; 	border-top:none; }
+div.agreement_check div.agreement h4 { 	float:left; 	display:inline; 	width:100%; 	font-size:14px; 	font-weight:bold; color:#393939; font-family:"NanumBarunGothicBold"; }
+div.agreement_check div.agreement_check_box p.txt { 	float:left; 	clear:both; 	display:inline; 	width:888px; 	height:200px; 	color:#666; 	line-height:20px; 	padding:10px; 	margin-top:9px; 	border:1px solid #e5e5e5; 	background:#fff; 	overflow-x:hidden; 	overflow-y:scroll; }
+div.agreement_check div.agreement input{margin-bottom:6px;padding:3px;background:#fff;border:2px solid #3c9daa;}
+div.agreement_check div.agreement_check_box div.check { 	float:left; 	clear:both; 	display:inline; 	text-align:right; 	margin-top:15px; }
+div.agreement_check div.agreement_check_box div.check input { 	margin-top:-2px; }
+div.agreement_check div.agreement_check_box div.check label { 	font-weight:bold; }
+div.btn_member_join { 	float:left; 	display:inline; 	width:100%; 	text-align:center;  margin-top:15px; }
+
+.input_chk {position:relative; }
+.input_chk .chk {display:none;position:absolute; width:20px; height:20px; }
+.input_chk label { width:365px; font-size:14px; color:#393939; font-family:"NanumGothic"; font-weight:bold; display:block;height:20px; background:url(../images/ico_check_off.gif) no-repeat ; cursor:pointer;padding:2px 0 0 30px;}
+.input_chk input:checked + label {background:url(../images/ico_check_on.gif) no-repeat ; }
+
+
+.btn12 span {display:block; height:30px; padding:0 13px 0 24px; font-size:13px; font-weight:bold; line-height:29px; background:url(../images/bl_120.png) no-repeat 6px center; }
+.btn7 span {display:block; height:30px; padding:0 20px 0 13px; font-size:13px; font-weight:bold; line-height:26px; background:url(../images/bl_17.gif) no-repeat right 9px; }
+
+
+[btn-author-type=qry] {display:none;border:3px solid red;}
+[btn-author-type=cud] {display:none;border:3px solid blue;}
+[btn-author-type=mngr] {display:none;border:3px solid green;}
