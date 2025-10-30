@@ -135,6 +135,7 @@ function listTblHeightSet(){
         var listBoxHeight = windowHeight - (headerHeight + pageTitleHeight + pageTabHeight + listTopHeight + 67);
 
         $(".list-tbl-box").css("height", listBoxHeight + "px");
+        $(".contents").css("padding-bottom", 24 + "px");
     }
 
 }

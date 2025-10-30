@@ -98,64 +98,51 @@
 
             <!-- 서브 타이틀 -->
             <!-- 앞에 뱃지 있을경우 bage 클레스 추가 -->
-            <div class="page-sub-title bage new-write">
+            <div class="page-sub-title">
                 폐전기.폐전자제품 평균중량 조사표
             </div>
 
-            <!-- 입력 폼 -->
-            <div class="write-form">
-                <div class="write-box">
-                    <table class="write-tbl">
+            <!-- View 폼 -->
+            <div class="view-form">
+                <div class="view-box">
+                    <table class="view-tbl">
                         <colgroup>
                             <col width="124px"/>
                             <col width=""/>
                             <col width="124px"/>
                             <col width=""/>
                         </colgroup>
-                        <tr class="write-row">
-                            <th class="write-title">
-                                <span class="required">이행년도</span>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>이행년도</span>
                             </th>
-                            <td class="write-con">
+                            <td class="view-con">
                                 <div class="select-box">
-                                    <select>
-                                        <option>2025년</option>
-                                    </select>
+                                    2025년
                                 </div>
                             </td>
                             <th></th>
                             <td></td>
                         </tr>
-                        <tr class="write-row">
-                            <th class="write-title">
-                                <span class="required">조사일시</span>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>조사일시</span>
                             </th>
-                            <td class="write-con">
-                                <div class="date-box">
-                                    <!-- 사용하는 플러그인 datepicker 연결 -->
-                                    <input type="text" placeholder="2025-09-16" class="date-input" readonly />
-                                </div>
+                            <td class="view-con">
+                               2025-09-16
                             </td>
-                            <th class="write-title">
-                                <span class="required">조사시간</span>
+                            <th class="view-title">
+                                <span>조사시간</span>
                             </th>
-                            <td class="write-con">
+                            <td class="view-con pd0">
                                 <div class="time-box">
                                     <div class="time-con">
-                                        <div class="select-box">
-                                             <select>
-                                                <option>17</option>
-                                            </select>
-                                        </div>
+                                        <span class="time-txt">17</span>
                                         <span>시</span>
                                     </div>
                                    
                                     <div class="time-con">
-                                        <div class="select-box">
-                                             <select>
-                                                <option>20</option>
-                                            </select>
-                                        </div>
+                                        <span class="time-txt">20</span>
                                         <span>분</span>
                                     </div>
 
@@ -166,12 +153,12 @@
                 </div>
 
                 <!-- 업체현황 start -->
-                <div class="write-box">
+                <div class="view-box">
                     <div class="tbl-title">
                         ※ 업체현황
                     </div>
 
-                    <table class="write-tbl">
+                    <table class="view-tbl">
                         <colgroup>
                             <col width="34px"/>
                             <col width="90px"/>
@@ -180,123 +167,101 @@
                             <col width="90px"/>
                             <col width=""/>
                         </colgroup>
-                        <tr class="write-row">
-                            <th class="write-title" colspan="2">
-                                <span class="required">업체명</span>
+                        <tr class="view-row">
+                            <th class="view-title" colspan="2">
+                                <span>업체명</span>
                             </th>
-                            <td class="write-con">
-                                <div class="search-box">
-                                    <input type="text" class="input-cont"/>
-                                    <button type="button" class="search-btn">
-                                        <img src="../../../resources/images/common/search_ico_b.png"/>
-                                    </button>
-                                </div>
+                            <td class="view-con">
+                                (주)자몽산업개발
                             </td>
-                            <th rowspan="2" class="write-title" colspan="2">
+                            <th rowspan="2" class="view-title" colspan="2">
                                 <span>주소</span>
                             </th>
-                            <td rowspan="2" class="write-con">
-                                <div class="area-box">
-                                    <textarea class="input-cont" readonly>
-인천광역시 서구 정서진로 410, A동 125호(오류동, 창업벤터녹색융합클러스터)</textarea>
+                            <td rowspan="2" class="view-con">
+                                <div class="pre-box">
+인천광역시 서구 정서진로 410, A동 
+125호(오류동, 창업벤터녹색융합클러
+스터)
                                 </div>
                             </td>
                         </tr>
 
-                        <tr class="write-row">
-                            <th class="write-title" colspan="2">
+                        <tr class="view-row">
+                            <th class="view-title" colspan="2">
                                 <span>사업자 등록번호</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" readonly value="2025-09-16" />
-                                </div>
+                            <td class="view-con">
+                                2025-09-16
                             </td>
                         </tr>
 
-                        <tr class="write-row">
-                            <th class="write-title" colspan="2">
+                        <tr class="view-row">
+                            <th class="view-title" colspan="2">
                                 <span>대표자명</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" readonly value="안OO" />
-                                </div>
+                            <td class="view-con">
+                                안OO
                             </td>
 
-                            <th class="write-title" colspan="2">
+                            <th class="view-title" colspan="2">
                                 <span>홈페이지</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" value="www.jmong.co.kr" />
-                                </div>
+                            <td class="view-con">
+                                www.jmong.co.kr
                             </td>
                         </tr>
 
-                        <tr class="write-row">
+                        <tr class="view-row">
                             <th class="line-title" rowspan="3">
                                 <span>담당자</span>
                             </th>
-                            <th class="write-title">
+                            <th class="view-title">
                                 <span>부서명</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" value="ㅇㅇ팀" />
-                                </div>
+                            <td class="view-con">
+                                ㅇㅇ팀
                             </td>
 
                             <th class="line-title" rowspan="3">
                                 <span>담당자연락처</span>
                             </th>
-                            <th class="write-title">
+                            <th class="view-title">
                                 <span>전화번호</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" value="010-0000-0000" />
-                                </div>
+                            <td class="view-con">
+                                010-0000-0000
                             </td>
                         </tr>
 
-                        <tr class="write-row">
-                            <th class="write-title">
+                        <tr class="view-row">
+                            <th class="view-title">
                                 <span>직책명</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" value="차장" />
-                                </div>
+                            <td class="view-con">
+                                차장
                             </td>
 
-                            <th class="write-title">
+                            <th class="view-title">
                                 <span>FAX</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" value="032-000-0000" />
-                                </div>
+                            <td class="view-con">
+                                032-000-0000
                             </td>
                         </tr>
 
-                        <tr class="write-row">
-                            <th class="write-title">
+                        <tr class="view-row">
+                            <th class="view-title">
                                 <span>성 명</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" value="안ㅇㅇ" />
-                                </div>
+                            <td class="view-con">
+                                안ㅇㅇ
                             </td>
 
-                            <th class="write-title">
+                            <th class="view-title">
                                 <span>E-mail</span>
                             </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" value="123@gmail.comm" />
-                                </div>
+                            <td class="view-con">
+                                123@gmail.comm
                             </td>
                         </tr>
                     </table>
@@ -308,18 +273,9 @@
 
             <!-- 품목 -->
             <div class="add-tbl-form">
-                <div class="add-tbl-head">
-                    <div class="btn-box">
-                        <button class="btn-new btn-focus add-btn" type="button">
-                            <span>품목</span>
-                        </button>
-                    </div>
-                </div>
-
                 <div class="add-tbl-box">
                     <table class="add-tbl">
                         <colgroup>
-                            <col width="65px"/>
                             <col width=""/>
                             <col width="164px"/>
                             <col width="170px"/>
@@ -327,7 +283,6 @@
                         </colgroup>
                         
                         <tr>
-                            <th>삭제</th>
                             <th>품목</th>
                             <th>표본수량(대)</th>
                             <th>표본 총중량 (kg)</th>
@@ -336,11 +291,6 @@
 
                         <!-- 데이터 생성시 해당 부분 생성 -->
                         <tr class="add-tbl-con">
-                            <td>
-                                <button type="button" class="tbl-delete-btn">
-                                    <img src="../../../resources/images/common/delete_ico_box.png"/>
-                                </button>
-                            </td>
                             <td class="align-left">
                                 기본형 내장고
                             </td>
@@ -355,11 +305,6 @@
 
 
                         <tr class="add-tbl-con">
-                            <td>
-                                <button type="button" class="tbl-delete-btn">
-                                    <img src="../../../resources/images/common/delete_ico_box.png"/>
-                                </button>
-                            </td>
                             <td class="align-left">
                                 기본형 내장고2
                             </td>
@@ -378,18 +323,9 @@
 
             <!-- 입회자/조사자 -->
             <div class="add-tbl-form">
-                <div class="add-tbl-head">
-                    <div class="btn-box">
-                        <button class="btn-new btn-focus add-btn" type="button">
-                            <span>입회자/조사자</span>
-                        </button>
-                    </div>
-                </div>
-
                 <div class="add-tbl-box">
                     <table class="add-tbl">
                         <colgroup>
-                            <col width="65px"/>
                             <col width="128px"/>
                             <col width=""/>
                             <col width="170px"/>
@@ -397,7 +333,6 @@
                         </colgroup>
                         
                         <tr>
-                            <th>삭제</th>
                             <th>구분</th>
                             <th>소속</th>
                             <th>직위</th>
@@ -407,16 +342,8 @@
                         <!-- 데이터 생성시 해당 부분 생성 -->
                         <tr class="add-tbl-con">
                             <td>
-                                <button type="button" class="tbl-delete-btn">
-                                    <img src="../../../resources/images/common/delete_ico_box.png"/>
-                                </button>
-                            </td>
-                            <td>
                                 <div class="select-box">
-                                    <select>
-                                        <option selected>입회자</option>
-                                        <option>조사자</option>
-                                    </select>
+                                    조사자
                                 </div>
                             </td>
                             <td class="align-left">
@@ -430,16 +357,8 @@
 
                         <tr class="add-tbl-con">
                             <td>
-                                <button type="button" class="tbl-delete-btn">
-                                    <img src="../../../resources/images/common/delete_ico_box.png"/>
-                                </button>
-                            </td>
-                            <td>
                                 <div class="select-box">
-                                    <select>
-                                        <option >입회자</option>
-                                        <option selected>조사자</option>
-                                    </select>
+                                    입회자
                                 </div>
                             </td>
                             <td class="align-left">
