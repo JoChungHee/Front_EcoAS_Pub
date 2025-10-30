@@ -7,26 +7,26 @@
 
     <!-- CSS SET -->
     <!-- 기존 프로젝트 CSS -->
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/common.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/admin.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/filestyle.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/jqgrid.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/jquery-ui-1.10.3.custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/layer.pop.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/select2.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/smartadmin-production-plugins.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/smartadmin-production.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/smartadmin-rtl.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/smartadmin-skins.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/style1.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/style_eco.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/style_renewal.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/swiper.css" />
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/toggle.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/admin.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/filestyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/layer.pop.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/select2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-production-plugins.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-production.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-rtl.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-skins.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style1.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style_eco.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style_renewal.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/toggle.css" />
 
     <!-- 신규 추가 CSS 해당 부분만 신규 반영 -->
     <link rel="stylesheet" type="text/css" href="../../../resources/css/font.css" />
@@ -36,7 +36,7 @@
     <!-- SCRIPT SET -->
     <script src="../../../resources/js/jquery-3.7.1.js"></script>
     <script src="../../../resources/js/swiper-bundle.min.js"></script>
-    <script src="../../../resources/js/common.js"></script>
+    <script src="../../../resources/js/ecoas_common.js"></script>
 </head>
 <body>
     <div class="new-container">
@@ -146,6 +146,16 @@
 
                 <div class="list-tbl-box">
                     <table class="list-tbl">
+                        <colgroup>
+                            <col width="35px"/>
+                            <col width="10%"/>
+                            <col width="*"/>
+                            <col width="115px"/>
+                            <col width="20%"/>
+                            <col width="14%"/>
+                            <col width="9.2%"/>
+                            <col width="49px"/>
+                        </colgroup>
                         <thead>
                             <tr>
                                 <th>
@@ -204,6 +214,7 @@
                                         <button class="filter-cancle">
                                             X
                                         </button>
+                                        <input type="text" class="filter-text"/>
                                         <button class="filter-search">
                                             <img src="../../../resources/images/common/search_ico_b.png"/>
                                         </button>
@@ -214,6 +225,7 @@
                                         <button class="filter-cancle">
                                             X
                                         </button>
+                                        <input type="text" class="filter-text"/>
                                         <button class="filter-search">
                                             <img src="../../../resources/images/common/search_ico_b.png"/>
                                         </button>
@@ -224,6 +236,7 @@
                                         <button class="filter-cancle">
                                             X
                                         </button>
+                                        <input type="text" class="filter-text"/>
                                         <button class="filter-search">
                                             <img src="../../../resources/images/common/search_ico_b.png"/>
                                         </button>
@@ -244,6 +257,8 @@
                                         <button class="filter-cancle">
                                             X
                                         </button>
+                                        <!-- 추후 사용하는 플러그인으로 교체 -->
+                                        <input type="date" class="filter-date"/>
                                         <button class="filter-canlendar">
                                             <img src="../../../resources/images/common/calendar_ico.png"/>
                                         </button>
@@ -254,6 +269,7 @@
                                         <button class="filter-cancle">
                                             X
                                         </button>
+                                        <input type="text" class="filter-text"/>
                                         <button class="filter-search">
                                             <img src="../../../resources/images/common/search_ico_b.png"/>
                                         </button>

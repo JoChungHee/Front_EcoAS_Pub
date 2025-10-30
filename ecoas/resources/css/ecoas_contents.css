@@ -115,6 +115,8 @@
     gap:8px;
     font-weight: 700;
     font-family: 'Noto Sans KR' !important;
+    border:0;
+    background:none;
 }
 
 .header-form .header-bottom .out-box .logout .logout-btn::before{
@@ -130,7 +132,7 @@
     display:flex;
     align-items: center;
     width:150px;
-    height:16px;
+    height:32px;
     border-radius: 5px;
     border:1px solid #00acc1;
     
@@ -170,6 +172,7 @@
     font-size:13px;
     font-weight:700;
     font-family: 'Noto Sans KR' !important;
+    border:0;
 }
 
 
@@ -188,6 +191,7 @@
 .check-box label{
     display:flex;
     align-items: center;
+    padding:0 !important;
 }
 
 .check-box label i{
@@ -281,6 +285,15 @@
     background-size:contain;
 }
 
+.btn-focus-line{
+    background:#fff;
+    border:1px solid #00acc1;
+}
+
+.btn-focus-line span{
+    color:#00acc1;
+}
+
 /* input */
 .input-cont{
     border-radius: 5px;
@@ -290,6 +303,11 @@
     border:1px solid #d3d7dc;
     background:#ffffff;
     font-family: 'Noto Sans KR' !important;
+}
+
+.input-cont:focus{
+    outline: none;
+    border:1px solid #00acc1 !important;
 }
 
 /* select */
@@ -309,6 +327,9 @@
     position: relative;
     color:#505258;
     font-family: 'Noto Sans KR' !important;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
 }
 
 .select-box select option{
@@ -526,14 +547,44 @@
     color:#363738;
     padding:0 2px;
     font-family: 'Noto Sans KR' !important;
+    padding:0;
+    border:0;
+    background:none;
 }
 
 .list-tbl tr.tbl-filter .filter-con .filter-search{
     width:12px;
+    padding:0;
+    border:0;
+    background:none;
 }
 
 .list-tbl tr.tbl-filter .filter-con .filter-canlendar{
     width:12px;
+    padding:0;
+    border:0;
+    background:none;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-text{
+    width:calc( 100% - 24px );
+    border:0;
+    background:none;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-date{
+    width:calc( 100% - 24px );
+    border:0;
+    background:none;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-date:not(:focus):in-range::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.list-tbl tr.tbl-filter .filter-con .filter-date::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
 
 .list-tbl tr.tbl-filter .filter-con .filter-select-box{
@@ -558,8 +609,13 @@
     width:100%;
     font-size:13px;
     color:#363738;
-    padding-left:20px;
+    padding-left:20px !important;
     font-family: 'Noto Sans KR' !important;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:0;
+    background:none;
 }
 
 .list-tbl tr.tbl-filter .filter-con .filter-select-box .filter-select option{
@@ -568,8 +624,13 @@
     font-family: 'Noto Sans KR' !important;
 }
 
+.list-tbl tr.tbl-filter .filter-con img{
+    max-width: 100%;
+}
+
 .list-tbl tr.tbl-filter td:last-child .filter-con .filter-cancle{
     margin:0 auto;
+    
 }
 
 /*  로그인  */
@@ -600,10 +661,58 @@
     font-weight:500;
     margin-top:14px;
     font-family: 'Noto Sans KR' !important;
+    line-height:1;
+}
+
+.login-form .login-confirm{
+    width:100%;
+    padding-bottom:30px;
+    border-bottom:1px solid #d3d7dc;
+}
+
+.login-form .login-confirm .confirm-name{
+    width:100%;
+}
+
+.login-form .login-confirm .confirm-name input{
+    width:100%;
+    height:60px;
+    font-size:15px;
+    font-family: 'Noto Sans KR' !important;
+    padding:0 19px;
+}
+
+.login-form .login-confirm .confirm-box{
+    width:100%;
+}
+
+.login-form .login-confirm .confirm-box .confirm-con{
+    width:100%;
+    display: flex;
+    align-items: center;
+    gap:8px;
+    margin-top:8px;
+}
+
+.login-form .login-confirm .confirm-box .confirm-con input{
+    width: calc(100% - 106px);
+    height:60px;
+    font-size:15px;
+    font-family: 'Noto Sans KR' !important;
+    padding:0 19px;
+}
+
+.login-form .login-confirm .confirm-box .confirm-con button{
+    height:60px;
+    width:98px;
+}
+
+.login-form .login-confirm .confirm-box .confirm-con button span{
+    font-size:15px;
 }
 
 .login-form .login-box{
-    margin-top:50px;
+    margin-top:30px;
     width:100%;
 }
 
@@ -627,7 +736,7 @@
 }
 
 .login-form .login-box .login-btn{
-    margin-top:40px;
+    margin-top:20px;
     width:100%;
 }
 
@@ -642,7 +751,7 @@
 }
 
 .login-form .login-comment{
-    margin-top:40px;
+    margin:40px 0 20px 0;
     font-size:14px;
     color:#78828f;
     font-family: 'Noto Sans KR' !important;

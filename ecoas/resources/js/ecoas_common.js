@@ -104,6 +104,18 @@ $(document).ready(function(){
         listTblHeightSet();
     });
 
+    /* list table filter date */
+    $(".filter-canlendar").click(function(){
+        var targetDate = $(this).closest(".filter-con").find(".filter-date");
+
+        if (targetDate[0].showPicker) {
+            targetDate[0].showPicker();
+        } else {
+            targetDate.focus();
+        }
+        
+    });
+
 });
 
 /* 공통 list table filter on/off */
@@ -120,7 +132,7 @@ function listTblHeightSet(){
         var listTopHeight = $(".list-form .list-top").outerHeight(true) || 0;
 
         var windowHeight = $(window).height();
-        var listBoxHeight = windowHeight - (headerHeight + pageTitleHeight + pageTabHeight + listTopHeight + 89);
+        var listBoxHeight = windowHeight - (headerHeight + pageTitleHeight + pageTabHeight + listTopHeight + 67);
 
         $(".list-tbl-box").css("height", listBoxHeight + "px");
     }
