@@ -118,8 +118,10 @@
                             </th>
                             <td class="write-con">
                                 <div class="select-box">
-                                    <select>
-                                        <option>2025년</option>
+                                    <!-- 25.11.06 이행년도 테스트용 데이터 추가 -->
+                                    <select class="year-sleect">
+                                        <option data-value="old-year">2025년</option>
+                                        <option data-value="new-year">2026년</option>
                                     </select>
                                 </div>
                             </td>
@@ -187,7 +189,7 @@
                             <td class="write-con">
                                 <div class="search-box">
                                     <input type="text" class="input-cont"/>
-                                    <button type="button" class="search-btn">
+                                    <button type="button" class="search-btn" onclick="companyListOpen();">
                                         <img src="../../../resources/images/common/search_ico_b.png"/>
                                     </button>
                                 </div>
@@ -310,7 +312,7 @@
             <div class="add-tbl-form">
                 <div class="add-tbl-head">
                     <div class="btn-box">
-                        <button class="btn-new btn-focus add-btn" type="button">
+                        <button class="btn-new btn-focus add-btn" onclick="itemAddPop();" type="button">
                             <span>품목</span>
                         </button>
                     </div>
@@ -458,6 +460,687 @@
         </div>
         <!-- ## contents end -->
 
+        <!-- 25.11.06 업체 리스트 팝업 추가 -->
+        <div class="layer-pop" id="companyListPop">
+            <div class="layer-form">
+                <div class="layer-box">
+                    <div class="layer-header">
+                        <div class="layer-title">
+                            업체정보 검색
+                        </div>
+                        <button onclick="layerClose();" type="button" class="layer-close-ico">
+                            <img src="../../../resources/images/common/layer_close_ico.png"/>
+                        </button>
+                    </div>
+                    <div class="layer-body">
+                        <!-- 검색영역 S -->
+                        <div class="list-search">
+                            <div class="list-search-form">
+                                <ul class="list-search-list">
+                                    <li class="list-search-box">
+                                        <div class="search-title">
+                                            업체유형
+                                        </div>
+                                        <div class="search-con">
+                                            <div class="select-box">
+                                                <select>
+                                                    <option>전체</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+                                    <li class="list-search-box">
+                                        <div class="search-title">
+                                            업종
+                                        </div>
+                                        <div class="search-con">
+                                            <div class="select-box">
+                                                <select>
+                                                    <option>전체</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-search-box type-all">
+                                        <div class="search-title">
+                                            업체명
+                                        </div>
+                                        <div class="search-con">
+                                            <div class="input-box">
+                                                <input type="text" class="input-cont" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list-search-btn">
+                                <button type="button" class="btn-new btn-focus search-btn">
+                                    <span>검색</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- 검색영역 E -->
+
+                        <!-- 업처정보 테이블 List S -->
+                        <div class="layer-list-tbl">
+                            <div class="layer-list-box">
+                                <table class="list-tbl">
+                                    <colgroup>
+                                        <col width=""/>
+                                        <col width="130px"/>
+                                        <col width="86px"/>
+                                        <col width="143px"/>
+                                        <col width="120px"/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>업체명</th>
+                                            <th>사업자번호</th>
+                                            <th>대표자명</th>
+                                            <th>전화번호</th>
+                                            <th>업종</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- loop -->
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+                                        <!-- loop end -->
+
+                                        <!-- sample data 
+                                            #### 개발시 삭제 스크롤 확인용 #### 
+                                        -->
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;">
+                                                    (주)자몽ㅇㅇㅇㅇ
+                                                </a>
+                                            </td>
+                                            <td>
+                                                123-12-12345
+                                            </td>
+                                            <td>
+                                                김ㅇㅇ
+                                            </td>
+                                            <td>
+                                                010-1234-1234
+                                            </td>
+                                            <td>
+                                                제조업
+                                            </td>
+                                        </tr>
+                                        <!-- sample data end -->
+                                    </tbody>
+                                </table>
+                            </div>
+                           
+                        </div>
+                        <!-- 업처정보 테이블 List E -->
+                    </div>
+                    <div class="layer-bottom">
+                        <div class="layer-btn-box">
+                            <button class="btn-new btn-gray" type="button" onclick="layerClose();">
+                                <span>닫기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 업체리스트 팝업 end -->
+
+        <!-- 품목추가 팝업 -->
+        <div class="layer-pop" id="itemListPop">
+            <div class="layer-form">
+                <div class="layer-box">
+                    <div class="layer-header">
+                        <div class="layer-title">
+                            품목 추가
+                        </div>
+                        <button onclick="layerClose();" type="button" class="layer-close-ico">
+                            <img src="../../../resources/images/common/layer_close_ico.png"/>
+                        </button>
+                    </div>
+                    <div class="layer-body">
+                        <div class="item-list-form">
+                            <ul class="item-list-box">
+                                <!-- 
+                                    클레스 분기
+                                    1. 추가 클레스 없음 = 전체 노출
+                                    2. old-type 클레스 = ~ 2025년 노출
+                                    3. new-type 클레스 = 2026년 ~ 노출
+                                -->
+                                <li class="item-list-con">
+                                    <div class="title">제품군</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-list-con old-type">
+                                    <div class="title">제품명</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-list-con new-type">
+                                    <div class="title">대상제품</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-list-con new-type">
+                                    <div class="title">품목</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-list-con">
+                                    <div class="title">세부제품</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layer-bottom">
+                        <div class="layer-btn-box">
+                            <button class="btn-new btn-focus" type="button" onclick="itemAddBtn();">
+                                <span>추가</span>
+                            </button>
+                            <button class="btn-new btn-gray" type="button" onclick="layerClose();">
+                                <span>닫기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 품목추가 팝업 end -->
     </div>
 </body>
 
@@ -468,6 +1151,47 @@
             $(this).closest("tr").remove();
         });
     });
+
+    /* 25.11.06 업체 팝업 오픈 추가 */
+    function companyListOpen(){
+        $("#companyListPop").fadeIn();
+        layerOpenScorllSet();
+        
+        // 팝업 테이블 셋팅 25.11.06 추가
+        // 데이터 불러온 후 함수실행 추천 ( document로 작동시 데이터 불러온 후 인식이 안될 수도 있음 )
+        // 적용 범위 1 = 팝업 실행 시 데이터 불러온 후 해당 함수 적용
+        // 적용 범위 2 = 테이블 검색 후 데이터 불러온 후 해당 함수 적용
+        layerListTblHeightSet();
+    }
+
+    /* 25.11.06 품목 추가 팝업 추가 */
+    function itemAddPop(){
+        var $selected = $(".year-sleect option:selected");
+        var yearValue = $selected.data("value"); // 현재 선택된 data-value 값
+
+        // data-value 값에 따라 분기 처리
+        if (yearValue === "old-year") {
+            $(".old-type").addClass('active');
+            $(".new-type").removeClass('active');
+        } else if (yearValue === "new-year") {
+            $(".new-type").addClass('active');
+            $(".old-type").removeClass('active');
+        } else {
+            //추후 경우의수 추가용
+        }
+
+        $("#itemListPop").fadeIn();
+        layerOpenScorllSet();
+
+    }
+
+    /* 25.11.06 품목 추가 버튼 */
+    function itemAddBtn(){
+        $("#itemListPop").fadeOut();
+        layerCloseScorllSet();
+
+        // 추후 추가 버튼 클릭시 해당 함수에 개발 or 위 2가지 스크립트 가지고 가주세요.
+    }
 </script>
 
 </html>

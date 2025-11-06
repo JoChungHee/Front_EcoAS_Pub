@@ -102,6 +102,7 @@ $(document).ready(function(){
 
     $(window).resize(function(){
         listTblHeightSet();
+        layerListTblHeightSet();
     });
 
     /* list table filter date */
@@ -139,5 +140,61 @@ function listTblHeightSet(){
     }
 
 }
+
+/* layer pop table 위치 계산 */
+function layerListTblHeightSet(){
+    if ($(".layer-list-tbl").length) {
+        $(".layer-pop").each(function(){
+            var $pop = $(this);
+            var headerHeight = $pop.find(".layer-header").outerHeight(true) || 0;
+            var searchHeight = $pop.find(".layer-body .list-search").outerHeight(true) || 0;
+            var bottomHeight = $pop.find(".layer-bottom").outerHeight(true) || 0;
+
+            var popHeight = $pop.height();
+            var listBoxHeight = popHeight - (headerHeight + searchHeight + bottomHeight + 40);
+
+            $pop.find(".layer-list-box").css("max-height", listBoxHeight + "px");
+        });
+    }
+
+}
+
+/* layer pop open scroll set */
+function layerOpenScorllSet(){
+    $('body').css("overflow","hidden");
+}
+
+function layerCloseScorllSet(){
+    $('body').css("overflow","auto");
+}
+
+/* layer pop close */
+function layerClose(){
+    $(".layer-pop").fadeOut();
+    layerCloseScorllSet();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

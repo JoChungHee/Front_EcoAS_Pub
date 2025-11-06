@@ -60,13 +60,24 @@
                 <div class="confirm-box">
                     <div class="confirm-con">
                         <input class="input-cont" type="text" placeholder="전화번호" />
-                        <button class="btn-new btn-focus-line" type="button">
+                        <!-- 25.11.06 클릭 이벤트 추가 -->
+                        <button class="btn-new btn-focus-line" onclick="phoneConfirm();" type="button">
                             <span>전송</span>
                         </button>
                     </div>
                     <div class="confirm-con">
-                        <input class="input-cont" type="text" placeholder="인증번호" />
-                        <button class="btn-new btn-focus-line" type="button">
+                        <!-- 25.11.06 인증 카운트 추가 DOM 구조 변경 -->
+                        <div class="input-box">
+                            <input class="input-cont" type="text" placeholder="인증번호" />
+                            <div class="input-count">
+                                <i>
+                                    <img src="resources/images/common/time_ico.png"/>
+                                </i>
+                                <span class="count">10:00</span>
+                            </div>
+                        </div>
+                        <!-- 25.11.06 클릭 이벤트 추가 -->
+                        <button class="btn-new btn-focus-line" onclick="confirmCheck();" type="button">
                             <span>인증</span>
                         </button>
                     </div>
@@ -88,5 +99,53 @@
             
         </div>
     </div>
+
+    <script>
+            
+        /* 25.11.06 로그인 인증 카운트 추가 */
+        function phoneConfirm(){
+            $(".input-count").addClass('active');
+
+            var confirmTime = 10 * 60;
+            var $countCont = $(".input-count .count");
+
+            // 이전 타이머 삭제
+            clearInterval(window.countTimer);
+
+            window.countTimer = setInterval(function(){
+                var min = Math.floor(confirmTime / 60);
+                var sec = confirmTime % 60;
+
+                var formatted = 
+                    (min < 10 ? "0" + min : min) + ":" + 
+                    (sec < 10 ? "0" + sec : sec);
+
+                $countCont.text(formatted);
+
+                if (confirmTime <= 0) {
+                    // 타이머 0초 조건 추가
+                    clearInterval(window.countTimer);
+                    $countCont.text("00:00");
+                    alert("인증 시간이 만료 되었습니다.");
+                }
+
+                confirmTime--;
+            }, 1000);
+
+        }
+
+        /* 25.11.06 핸드폰 인증 버튼 이벤트 추가 */
+        function confirmCheck(){
+            // 카운트 stop
+            clearInterval(window.countTimer);
+
+            // 카운트 숨기기
+            $(".input-count").removeClass('active');
+            $(".input-count .count").text("00:00");
+
+            alert("인증이 완료 되었습니다.");
+        }
+
+    </script>
 </body>
 </html>
