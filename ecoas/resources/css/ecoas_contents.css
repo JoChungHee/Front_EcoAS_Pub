@@ -226,6 +226,55 @@
     font-family: 'Noto Sans KR' !important;
 }
 
+/* radio box */
+.radio-box{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:10px 20px;
+}
+
+.radio-con input[type="radio"]{
+    display:none;
+}
+
+.radio-con label{
+    display:flex;
+    align-items: center;
+    padding:0 !important;
+}
+
+.radio-con label i{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:20px;
+    height:20px;
+    border-radius: 20px;
+    border:1px solid #d3d7dc;
+}
+
+.radio-con label:hover i{
+    border:1px solid #505258;
+}
+
+.radio-con input[type="radio"]:disabled + label:hover i{
+    border:1px solid #d3d7dc;
+}
+
+.radio-con input[type="radio"]:checked + label i,
+.radio-con input[type="radio"]:checked:disabled + label i{
+    border:1px solid #0097a7;
+}
+
+.radio-con input[type="radio"]:checked + label i::before{
+    content:"";
+    display:block;
+    width:10px;
+    height:10px;
+    border-radius: 14px;
+    background:#0097a7;
+}
 
 /* button */
 .btn-new{
@@ -607,7 +656,7 @@
 /* table */
 .list-tbl-box{
     width:100%;
-    min-height:300px;
+    
     overflow-y: auto;
     border-radius: 5px;
     border:1px solid #d3d7dc; 
@@ -1356,6 +1405,111 @@
     background-position: right center;;
 }
 
+/* 입력 리스트 테이블 */
+.write-list-tbl{
+    width:100%;
+}
+
+.write-list-tbl tr th{
+    background:#fafbfc;
+    border-right:1px solid #e5e9eb;
+    border-top:1px solid #e5e9eb;
+    text-align: center;
+    font-size:13px;
+    font-weight:700;
+    color:#363738;
+    font-family: 'Noto Sans KR' !important;
+    height:40px;
+    padding:5px 10px;
+}
+
+.write-list-tbl tr td{
+    height:40px;
+    border-right:1px solid #e5e9eb;
+    border-top:1px solid #e5e9eb;
+    padding:5px 10px;
+    font-size:13px;
+    color:#363738;
+    font-family: 'Noto Sans KR' !important;
+    line-height:1.3;
+}
+
+.write-list-tbl tr th:last-child,
+.write-list-tbl tr td:last-child{
+    border-right:0;
+}
+
+.write-list-tbl tr th.border-r,
+.write-list-tbl tr td.border-r{
+    border-right:1px solid #e5e9eb;
+}
+
+.write-list-tbl tr th.border-l,
+.write-list-tbl tr td.border-l{
+    border-left:1px solid #e5e9eb;
+}
+
+.write-list-tbl tr th.border-t,
+.write-list-tbl tr td.border-t{
+    border-top:1px solid #e5e9eb;
+}
+
+.write-list-tbl tr th.border-b,
+.write-list-tbl tr td.border-b{
+    border-bottom:1px solid #e5e9eb;
+}
+
+.write-list-tbl tr td .radio-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.write-list-tbl tr td .radio-con label{
+    margin:0 auto;
+}
+
+.write-list-tbl tr td .radio-con label i{
+    margin:0 auto;
+}
+
+.write-list-tbl tr td .input-box{
+    width:100%;
+}
+
+.write-list-tbl tr td .input-box .input-cont{
+    width:100%;
+}
+
+
+.write-tbl tr td .date-box{
+    width:100%;
+    position: relative;
+}
+
+.write-tbl tr td .date-box .input-date{
+    width:100%;
+    background:#fff;
+}
+
+.write-tbl tr td .date-box .input-date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  background: none;
+}
+
+.write-tbl tr td .date-box .date-btn{
+    border:0;
+    background:none;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translate( -0, -50% );
+    width:15px;
+}
+
+.write-tbl tr td .date-box .date-btn img{
+    width:100%;
+}
 
 
 /* VIEW 테이블 */
@@ -1488,6 +1642,118 @@
     font-family: 'Noto Sans KR' !important;
     border-bottom:1px solid #d3d7dc;
 }
+
+
+/* 입력 리스트 뷰 테이블 */
+.view-list-tbl{
+    width:100%;
+}
+
+.view-list-tbl tr th{
+    background:#fafbfc;
+    border-right:1px solid #e5e9eb;
+    border-top:1px solid #e5e9eb;
+    text-align: center;
+    font-size:13px;
+    font-weight:700;
+    color:#363738;
+    font-family: 'Noto Sans KR' !important;
+    height:40px;
+    padding:5px 10px;
+}
+
+.view-list-tbl tr:first-child th{
+    border-top:0;
+}
+
+.view-list-tbl tr td{
+    height:40px;
+    border-right:1px solid #e5e9eb;
+    border-top:1px solid #e5e9eb;
+    padding:5px 10px;
+    font-size:13px;
+    color:#363738;
+    font-family: 'Noto Sans KR' !important;
+    line-height:1.3;
+}
+
+.view-list-tbl tr th:last-child,
+.view-list-tbl tr td:last-child{
+    border-right:0;
+}
+
+.view-list-tbl tr th.border-r,
+.view-list-tbl tr td.border-r{
+    border-right:1px solid #e5e9eb;
+}
+
+.view-list-tbl tr th.border-l,
+.view-list-tbl tr td.border-l{
+    border-left:1px solid #e5e9eb;
+}
+
+.view-list-tbl tr th.border-t,
+.view-list-tbl tr td.border-t{
+    border-top:1px solid #e5e9eb;
+}
+
+.view-list-tbl tr th.border-b,
+.view-list-tbl tr td.border-b{
+    border-bottom:1px solid #e5e9eb;
+}
+
+.view-list-tbl tr td .radio-con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-list-tbl tr td .radio-con label{
+    margin:0 auto;
+}
+
+.view-list-tbl tr td .radio-con label i{
+    margin:0 auto;
+}
+
+.view-list-tbl tr td .input-box{
+    width:100%;
+}
+
+.view-list-tbl tr td .input-box .input-cont{
+    width:100%;
+}
+
+
+.view-tbl tr td .date-box{
+    width:100%;
+    position: relative;
+}
+
+.view-tbl tr td .date-box .input-date{
+    width:100%;
+    background:#fff;
+}
+
+.view-tbl tr td .date-box .input-date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  background: none;
+}
+
+.view-tbl tr td .date-box .date-btn{
+    border:0;
+    background:none;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translate( -0, -50% );
+    width:15px;
+}
+
+.wviewrite-tbl tr td .date-box .date-btn img{
+    width:100%;
+}
+
 
 /* 팝업 공통 영역 */
 .layer-body .list-search{

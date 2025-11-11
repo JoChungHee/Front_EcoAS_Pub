@@ -117,6 +117,18 @@ $(document).ready(function(){
         
     });
 
+    /* write calendar set */
+    $(".date-btn").click(function(){
+        var targetDate = $(this).closest(".date-box").find(".input-date");
+
+        if (targetDate[0].showPicker) {
+            targetDate[0].showPicker();
+        } else {
+            targetDate.focus();
+        }
+        
+    });
+
 });
 
 /* 공통 list table filter on/off */
@@ -125,6 +137,7 @@ function listTblSearch(){
 }
 
 /* list table 위치 계산 */
+// 25.11.11 height 부분 변경
 function listTblHeightSet(){
     if ($(".list-tbl-box").length) {
         var headerHeight = $(".header-form").outerHeight(true) || 0;
@@ -135,7 +148,7 @@ function listTblHeightSet(){
         var windowHeight = $(window).height();
         var listBoxHeight = windowHeight - (headerHeight + pageTitleHeight + pageTabHeight + listTopHeight + 67);
 
-        $(".list-tbl-box").css("height", listBoxHeight + "px");
+        $(".list-tbl-box").css("max-height", listBoxHeight + "px");
         $(".contents").css("padding-bottom", 24 + "px");
     }
 
