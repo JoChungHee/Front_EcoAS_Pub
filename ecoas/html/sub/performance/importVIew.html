@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAS 법정서식 업무시스템</title>
+
+    <!-- CSS SET -->
+    <!-- 기존 프로젝트 CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/admin.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/filestyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/layer.pop.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/select2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-production-plugins.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-production.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-rtl.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-skins.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style1.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style_eco.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style_renewal.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/toggle.css" />
+
+    <!-- 신규 추가 CSS 해당 부분만 신규 반영 -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/ecoas_contents.css" />
+
+    <!-- SCRIPT SET -->
+    <script src="../../../resources/js/jquery-3.7.1.js"></script>
+    <script src="../../../resources/js/swiper-bundle.min.js"></script>
+    <script src="../../../resources/js/ecoas_common.js"></script>
+</head>
+<body>
+    <div class="new-container">
+        <!-- ## header start -->
+        <div class="header-form">
+            <div class="header-top">
+                <div class="logo-box">
+                    <i class="logo">
+                        <img src="../../../resources/images/common/logo.png"/>
+                    </i>
+                    <p>법정서식 업무시스템</p>
+                </div>
+                <div class="user-box">
+                    <span class="user-name">OOO</span>님 환영합니다.
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="menu-box">
+                    <div class="select-box">
+                        <select class="menu-list">
+                            <option value="" >선택하세요</option>
+                            <option value="" >의무이행 실태 현황조사</option>
+                            <option value="" >매입·판매/출고·수입 실적 현장조사</option>
+                            <option value="" >평균중량/소재구성비 현장조사</option>
+                            <option value="" >비대상 혼입비율 현장조사</option>
+                            <option value="" >자동차해체재활용업자 재활용의무이행결과 점검</option>
+                            <option value="" >파쇄재활용업자 재활용의무이행결과 점검표</option>
+                            <option value="" >파쇄잔재물재활용업자 재활용의무이행결과 점검</option>
+                            <option value="" >폐가스류처리업자 재활용의무이행결과 점검</option>
+                            <option value="" >폐자동차 확인</option>
+                            <option value="" >사업장방문통보서 현장조사</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="out-box">
+                    <div class="logout">
+                        <button type="button" class="logout-btn" >
+                            로그아웃
+                        </button>
+                    </div>
+                    <div class="login-count">
+                        <div class="time-count">
+                            <span class="count" data-count="10:00" >00:00</span>
+                        </div>
+                        <button type="button" class="time-extend">
+                            시간연장
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ## header End -->
+
+        <!-- ## contents start -->
+        <div class="contents">
+            <!-- 공통 페이지 타이틀 -->
+            <div class="page-title">매입·판매/출고·수입 실적 현장조사</div>
+
+            <!-- 서브 타이틀 -->
+            <div class="page-sub">
+                 <div class="page-sub-title">
+                    전기·전자제품 출고·수입 실적 조사·확인표
+                </div>
+
+                <div class="page-sub-btn" >
+                    <a href="javascript:;" class="btn-new btn-white">
+                        <span>수정</span>
+                    </a>
+                    <a href="javascript:;" class="btn-new btn-white">
+                        <span>삭제</span>
+                    </a>
+                    <a href="javascript:;" class="btn-new btn-print">
+                        <span>리포트 출력</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 입력 폼 -->
+            <div class="view-form">
+                <!-- 일반현황 start -->
+                <div class="view-box">
+                    <div class="tbl-title">
+                        ※ 일반현황
+                    </div>
+
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>업체명</span>
+                            </th>
+                            <td class="view-con">
+                                (주)자몽산업개발
+                            </td>
+                            <th class="view-title">
+                                <span>대표자명</span>
+                            </th>
+                            <td class="view-con">
+                                김ㅇㅇ
+                            </td>
+                           
+                        </tr>
+
+                        <tr class="view-row">
+                            <th class="view-title" >
+                                <span>주소</span>
+                            </th>
+                            <td colspan="3" class="view-con">
+                                인천광역시 서구 정서진로 410, A동 125호(오류동, 창업벤터녹색융합클러스터)
+                            </td>
+                        </tr>
+
+                     
+                    </table>
+                </div>
+                <!-- 일반현황 end -->
+
+                <!-- 조사결과 start -->
+                <div class="view-box">
+                    <div class="tbl-title">
+                        ※ 조사ㆍ확인 사항 및 결과
+                    </div>
+
+                    <table class="view-list-tbl">
+                        <colgroup>
+                            <col width="110px" />
+                            <col width="220px" />
+                            <col width="80px" />
+                            <col width="80px" />
+                            <col width="" />
+                        </colgroup>
+                        <thead>
+                            <tr class="view-row">
+                                <th class="view-title" rowspan="2">
+                                    조사ㆍ확인사항
+                                </th>
+                                <th class="view-title" rowspan="2">
+                                    주요착안사항
+                                </th>
+                                <th class="view-title" colspan="2">
+                                    결과
+                                </th>
+                                <th class="view-title" rowspan="2">
+                                    부적정 사유
+                                </th>
+                            </tr>
+
+                            <tr class="view-row">
+                                <th class="view-title">적정</th>
+                                <th class="view-title border-r">부적정</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="view-row">
+                                <td rowspan="2" class="text-center">
+                                    1.연도별 대상자 및 비대상자 여부 확인
+                                </td>
+                                <td>
+                                    ○ 비대상품 생산자 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio01" class="clear" name=" importCheck01" checked />
+                                        <label for=" importRadio01">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio02" class="not-clear" name=" importCheck01" />
+                                        <label for=" importRadio02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    ○ 연도별 제품별 시행시기별 비대상자 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio03" class="clear" name=" importCheck02" checked />
+                                        <label for=" importRadio03">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio04" class="not-clear" name=" importCheck02" />
+                                        <label for=" importRadio04">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <!-- 2.장부 기록ㆍ보존에 관한 사항  -->
+                                <td rowspan="2" class="text-center">
+                                    2.장부 기록ㆍ보존에 관한 사항
+                                </td>
+                                <td>
+                                    ○ 재활용의무대상 제품의 제조ㆍ수입관리대장 기록ㆍ보존 상태
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio05" class="clear" name=" importCheck03" checked />
+                                        <label for=" importRadio05">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio06" class="not-clear" name=" importCheck03" />
+                                        <label for=" importRadio06">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    ○ 작성요령 준수여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio07" class="clear" name=" importCheck04" checked />
+                                        <label for=" importRadio07">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio08" class="not-clear" name=" importCheck04" />
+                                        <label for=" importRadio08">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <!-- 3.출고(수입)량 제출 누락여부 확인  -->
+                                <td rowspan="3" class="text-center">
+                                    3.출고(수입)량 제출 누락여부 확인
+                                </td>
+                                <td>
+                                    ○ 장부, 결산서, 제품수불부 등과 출고실적서와의 비교 누락분 확인
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio09" class="clear" name=" importCheck05" checked />
+                                        <label for=" importRadio09">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio10" class="not-clear" name=" importCheck05" />
+                                        <label for=" importRadio10">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    ○ 장부 등에서 확인 불가한 재활용 의무대상 제품 유무 
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio11" class="clear" name=" importCheck06" checked />
+                                        <label for=" importRadio11">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio12" class="not-clear" name=" importCheck06" />
+                                        <label for=" importRadio12">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    ○ 출고량에 비대상품 포함 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio13" class="clear" name=" importCheck07" checked />
+                                        <label for=" importRadio13">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio14" class="not-clear" name=" importCheck07" />
+                                        <label for=" importRadio14">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            <tr class="view-row">
+                                <!-- 4.기 제출한 출고실적 확인  -->
+                                <td rowspan="4" class="text-center">
+                                    4.기 제출한 출고실적 확인
+                                </td>
+                                <td>
+                                    ○ 제품 및 제품군 일치 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio15" class="clear" name=" importCheck08" checked />
+                                        <label for=" importRadio15">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio16" class="not-clear" name=" importCheck08" />
+                                        <label for=" importRadio16">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <td>
+                                    ○ 출고수량 확인 및 출고량 산출의 적정성
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio17" class="clear" name=" importCheck09" checked />
+                                        <label for=" importRadio17">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio18" class="not-clear" name=" importCheck09" />
+                                        <label for=" importRadio18">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    ○ 반품 및 견본품 포함 여부 확인
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio19" class="clear" name=" importCheck10" checked />
+                                        <label for=" importRadio19">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio20" class="not-clear" name=" importCheck10" />
+                                        <label for=" importRadio20">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    ○ OEM제품 수급ㆍ공급자간 수량 누락여부 상호 확인
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio21" class="clear" name=" importCheck11" checked />
+                                        <label for=" importRadio21">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio22" class="not-clear" name=" importCheck11" />
+                                        <label for=" importRadio22">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <!-- 5.재활용 의무이행 확인  -->
+                                <td rowspan="2" class="text-center">
+                                    5.재활용 의무이행 확인
+                                </td>
+                                <td>
+                                    ○ 재활용의무이행 적정 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio23" class="clear" name=" importCheck12" checked />
+                                        <label for=" importRadio23">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio24" class="not-clear" name=" importCheck12" />
+                                        <label for=" importRadio24">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    ○ 누락된 품목에 대한 의무이행 확인
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio25" class="clear" name=" importCheck13" checked />
+                                        <label for=" importRadio25">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio26" class="not-clear" name=" importCheck13" />
+                                        <label for=" importRadio26">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <!-- 6.의무량 적정 산출 확인  -->
+                                <td class="text-center">
+                                    6.의무량 적정 산출 확인
+                                </td>
+                                <td>
+                                    ○ 의무량 산출의 적정성
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio27" class="clear" name=" importCheck14" checked />
+                                        <label for=" importRadio27">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio28" class="not-clear" name=" importCheck14" />
+                                        <label for=" importRadio28">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <!-- 7. 기타  -->
+                                <td rowspan="2" class="text-center">
+                                    7. 기타
+                                </td>
+                                <td>
+                                    기타 사항 1
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio29" class="clear" name=" importCheck15" checked />
+                                        <label for=" importRadio29">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio30" class="not-clear" name=" importCheck15" />
+                                        <label for=" importRadio30">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    기타 사항 2
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio31" class="clear" name=" importCheck16" checked />
+                                        <label for=" importRadio31">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled  id=" importRadio32" class="not-clear" name=" importCheck16" />
+                                        <label for=" importRadio32">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                     
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+
+                     
+                    </table>
+                </div>
+                <!-- 조사결과 end -->
+
+                <!-- 조사일자 start -->
+                <div class="view-box">
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>첨부</span>
+                            </th>
+                            <td class="view-con">
+                                첨부된 리스트
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 조사일자 end -->
+
+                <!-- 조사일자 start -->
+                <div class="view-box">
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>조사일자</span>
+                            </th>
+                            <td class="view-con">
+                                2025-11-11
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 조사일자 end -->
+               
+            </div>
+            <!-- 입력 폼 end -->
+
+            <!-- 입회자/확인자 -->
+            <div class="add-tbl-form">
+                <div class="add-tbl-box">
+                    <table class="add-tbl">
+                        <colgroup>
+                            <col width="128px"/>
+                            <col width=""/>
+                            <col width="170px"/>
+                            <col width="157px"/>
+                        </colgroup>
+                        
+                        <tr>
+                            <th>구분</th>
+                            <th>소속</th>
+                            <th>직책/직급</th>
+                            <th>성명</th>
+                        </tr>
+
+                        <!-- 데이터 생성시 해당 부분 생성 -->
+                        <tr class="add-tbl-con">
+                            <td>
+                                <div class="select-box">
+                                    확인자
+                                </div>
+                            </td>
+                            <td class="align-left">
+                                (주)자몽산업개발
+                            </td>
+                            <td>
+                                차장
+                            </td>
+                            <td>안ㅇㅇ</td>
+                        </tr>
+
+                        <tr class="add-tbl-con">
+                            <td>
+                                <div class="select-box">
+                                    조사자
+                                </div>
+                            </td>
+                            <td class="align-left">
+                                (주)자몽산업개발
+                            </td>
+                            <td>
+                                차장
+                            </td>
+                            <td>안ㅇㅇ</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 입회자/조사자 end -->
+
+            <!-- 확인서 사본 수령자 -->
+            <div class="view-form mgt20">
+                <div class="view-box">
+                    <table class="view-list-tbl t-border-none text-center">
+                        <tr>
+                            <th rowspan="2">
+                                입회자<br>
+                                (확인서 사본 수령자)
+                            </th>
+                            <th>소속</th>
+                            <th>직책/직급</th>
+                            <th>성명</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                ㅇㅇㅇ 컴퍼니
+                            </td>
+                            <td>
+                                차장
+                            </td>
+                            <td>
+                                김ㅇㅇ
+                            </td>
+                            
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 확인서 사본 수령자 end -->
+
+        </div>
+        <!-- ## contents end -->
+
+    </div>
+</body>
+
+<script>
+    $(document).ready(function(){
+     
+
+    });
+
+
+    
+</script>
+
+</html>

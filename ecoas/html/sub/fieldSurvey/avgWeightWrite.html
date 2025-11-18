@@ -382,14 +382,14 @@
             <div class="add-tbl-form">
                 <div class="add-tbl-head">
                     <div class="btn-box">
-                        <button class="btn-new btn-focus add-btn" type="button">
+                        <button class="btn-new btn-focus add-btn manager-add" type="button">
                             <span>입회자/조사자</span>
                         </button>
                     </div>
                 </div>
 
                 <div class="add-tbl-box">
-                    <table class="add-tbl">
+                    <table class="add-tbl manager-tbl">
                         <colgroup>
                             <col width="65px"/>
                             <col width="128px"/>
@@ -415,43 +415,37 @@
                             </td>
                             <td>
                                 <div class="select-box">
-                                    <select>
-                                        <option selected>입회자</option>
-                                        <option>조사자</option>
+                                    <select class="manager-type">
+                                        <option value="witness" selected>입회자</option>
+                                        <option value="investigator">조사자</option>
                                     </select>
                                 </div>
                             </td>
-                            <td class="align-left">
-                                (주)자몽산업개발
+                            <td>
+                                <div class="witness">
+                                    <input type="text" class="input-cont" />
+                                </div>
+                                <div class="investigator">
+                                    <div class="select-box">
+                                        <select>
+                                            <option>선택</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </td>
                             <td>
-                                차장
+                                <div class="input-box">
+                                    <input type="text" class="input-cont" />
+                                </div>
                             </td>
-                            <td>안ㅇㅇ</td>
+                            <td>
+                                <div class="input-box">
+                                    <input type="text" class="input-cont" />
+                                </div>
+                            </td>
                         </tr>
 
-                        <tr class="add-tbl-con">
-                            <td>
-                                <button type="button" class="tbl-delete-btn">
-                                    <img src="../../../resources/images/common/delete_ico_box.png"/>
-                                </button>
-                            </td>
-                            <td>
-                                <div class="select-box">
-                                    <select>
-                                        <option >입회자</option>
-                                        <option selected>조사자</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <td class="align-left">
-                                (주)자몽산업개발
-                            </td>
-                            <td>
-                                차장
-                            </td>
-                            <td>안ㅇㅇ</td>
-                        </tr>
+                       
                     </table>
                 </div>
             </div>
@@ -1146,9 +1140,94 @@
 
 <script>
     $(document).ready(function(){
-        /* 추가항목 삭제 */
-        $(".tbl-delete-btn").click(function(){
+        /* 초기 실행 - 입회자 / 조사자 */
+        $(".add-tbl-con").each(function() {
+            updateManagerType($(this));
+        });
+
+        /* 입회자/조사자 추가 */
+        $(".manager-add").on("click", function() {
+            var newRow = `
+            <tr class="add-tbl-con">
+                <td>
+                    <button type="button" class="tbl-delete-btn">
+                        <img src="../../../resources/images/common/delete_ico_box.png"/>
+                    </button>
+                </td>
+                <td>
+                    <div class="select-box">
+                        <select class="manager-type">
+                            <option value="witness" selected>입회자</option>
+                            <option value="investigator">조사자</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="witness">
+                        <input type="text" class="input-cont" />
+                    </div>
+                    <div class="investigator">
+                        <div class="select-box">
+                            <select>
+                                <option>선택</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="input-box">
+                        <input type="text" class="input-cont" />
+                    </div>
+                </td>
+                <td>
+                    <div class="input-box">
+                        <input type="text" class="input-cont" />
+                    </div>
+                </td>
+            </tr>
+            `;
+            // 테이블 마지막에 추가
+            var $lastTr = $(newRow).appendTo(".manager-tbl");
+
+            // 새로 추가된 tr 초기 상태 show/hide 처리
+            updateManagerType($lastTr);
+        });
+
+        // -------------------------
+        // tr 삭제 버튼
+        // -------------------------
+        $(document).on("click", ".tbl-delete-btn", function() {
             $(this).closest("tr").remove();
+        });
+
+        // -------------------------
+        // select 값 변경 시 show/hide
+        // -------------------------
+        $(document).on("change", ".manager-type", function() {
+            var $tr = $(this).closest("tr");
+            updateManagerType($tr);
+        });
+
+        // -------------------------
+        // show/hide 처리 함수
+        // -------------------------
+        function updateManagerType($tr) {
+            var selectedVal = $tr.find(".manager-type").val();
+            // .witness, .investigator div
+            $tr.find(".witness, .investigator").each(function() {
+                if($(this).hasClass(selectedVal)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+
+        // -------------------------
+        // 초기 페이지 로드 시 기존 tr 처리
+        // -------------------------
+        $(".add-tbl-con").each(function() {
+            updateManagerType($(this));
         });
     });
 

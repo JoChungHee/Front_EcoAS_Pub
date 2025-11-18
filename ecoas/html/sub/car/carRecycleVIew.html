@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAS 법정서식 업무시스템</title>
+
+    <!-- CSS SET -->
+    <!-- 기존 프로젝트 CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/admin.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/filestyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/layer.pop.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/select2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-production-plugins.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-production.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-rtl.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-skins.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style1.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style_eco.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style_renewal.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/toggle.css" />
+
+    <!-- 신규 추가 CSS 해당 부분만 신규 반영 -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/ecoas_contents.css" />
+
+    <!-- SCRIPT SET -->
+    <script src="../../../resources/js/jquery-3.7.1.js"></script>
+    <script src="../../../resources/js/swiper-bundle.min.js"></script>
+    <script src="../../../resources/js/ecoas_common.js"></script>
+</head>
+<body>
+    <div class="new-container">
+        <!-- ## header start -->
+        <div class="header-form">
+            <div class="header-top">
+                <div class="logo-box">
+                    <i class="logo">
+                        <img src="../../../resources/images/common/logo.png"/>
+                    </i>
+                    <p>법정서식 업무시스템</p>
+                </div>
+                <div class="user-box">
+                    <span class="user-name">OOO</span>님 환영합니다.
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="menu-box">
+                    <div class="select-box">
+                        <select class="menu-list">
+                            <option value="" >선택하세요</option>
+                            <option value="" >의무이행 실태 현황조사</option>
+                            <option value="" >매입·판매/출고·수입 실적 현장조사</option>
+                            <option value="" >평균중량/소재구성비 현장조사</option>
+                            <option value="" >비대상 혼입비율 현장조사</option>
+                            <option value="" >자동차해체재활용업자 재활용의무이행결과 점검</option>
+                            <option value="" >파쇄재활용업자 재활용의무이행결과 점검표</option>
+                            <option value="" >파쇄잔재물재활용업자 재활용의무이행결과 점검</option>
+                            <option value="" >폐가스류처리업자 재활용의무이행결과 점검</option>
+                            <option value="" >폐자동차 확인</option>
+                            <option value="" >사업장방문통보서 현장조사</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="out-box">
+                    <div class="logout">
+                        <button type="button" class="logout-btn" >
+                            로그아웃
+                        </button>
+                    </div>
+                    <div class="login-count">
+                        <div class="time-count">
+                            <span class="count" data-count="10:00" >00:00</span>
+                        </div>
+                        <button type="button" class="time-extend">
+                            시간연장
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ## header End -->
+
+        <!-- ## contents start -->
+        <div class="contents">
+            <!-- 공통 페이지 타이틀 -->
+            <div class="page-title">자동차해체재활용업자 재활용의무이행결과 점검</div>
+
+            <!-- 서브 타이틀 -->
+            <div class="page-sub">
+                 <div class="page-sub-title">
+                    자동차해체재활용업자 재활용의무이행결과 점검표
+                </div>
+
+                <div class="page-sub-btn" >
+                    <a href="javascript:;" class="btn-new btn-white">
+                        <span>수정</span>
+                    </a>
+                    <a href="javascript:;" class="btn-new btn-white">
+                        <span>삭제</span>
+                    </a>
+                    <a href="javascript:;" class="btn-new btn-print">
+                        <span>리포트 출력</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 입력 폼 -->
+            <div class="view-form">
+                <!-- 일반현황 start -->
+                <div class="view-box">
+                    <div class="tbl-title">
+                        ※ 일반현황
+                    </div>
+
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>업체명</span>
+                            </th>
+                            <td class="view-con">
+                                (주)자몽산업개발
+                            </td>
+                            <th class="view-title">
+                                <span>대표자명</span>
+                            </th>
+                            <td class="view-con">
+                                김ㅇㅇ
+                            </td>
+                           
+                        </tr>
+
+                        <tr class="view-row">
+                            <th class="view-title" >
+                                <span>주소</span>
+                            </th>
+                            <td colspan="3" class="view-con">
+                                인천광역시 서구 정서진로 410, A동 125호(오류동, 창업벤터녹색융합클러스터)
+                            </td>
+                        </tr>
+
+                     
+                    </table>
+                </div>
+                <!-- 일반현황 end -->
+
+                <!-- 조사결과 start -->
+                <div class="view-box">
+                    <div class="tbl-title">
+                        ※ 점검사항 및 결과
+                    </div>
+
+                    <table class="view-list-tbl">
+                        <colgroup>
+                            <col width="100px" />
+                            <col width="220px" />
+                            <col width="80px" />
+                            <col width="80px" />
+                            <col width="" />
+                        </colgroup>
+                        <thead>
+                            <tr class="view-row">
+                                <th class="view-title" rowspan="2">
+                                    점검사항
+                                </th>
+                                <th class="view-title" rowspan="2">
+                                    세부 점검사항
+                                </th>
+                                <th class="view-title" colspan="2">
+                                    결과
+                                </th>
+                                <th class="view-title" rowspan="2">
+                                    부적정 사유
+                                </th>
+                            </tr>
+
+                            <tr class="view-row">
+                                <th class="view-title">적정</th>
+                                <th class="view-title border-r">부적정</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="view-row">
+                                <td rowspan="6" class="text-center">
+                                    1.재활용비율의 준수여부 확인
+                                </td>
+                                <td>
+                                    가. 재활용결과보고서 제출 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio01" class="clear" name="carCheck01" checked />
+                                        <label for="carRadio01">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio02" class="not-clear" name="carCheck01" />
+                                        <label for="carRadio02">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    나. 재활용결과보고서의 증명자료 비치여부<br>
+                                    - 재활용방법과 기준의 증명 서류<br>
+                                    - 재사용 및 재활용량 증명 서류 (세금계산서, 계량표 등)
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio03" class="clear" name="carCheck02" checked />
+                                        <label for="carRadio03">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio04" class="not-clear" name="carCheck02" />
+                                        <label for="carRadio04">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    다. 비대상 자동차 등의 재활용내역 기재 여부<br>
+                                    - 비대상차량 및 수출차량 등의 재활용실적 포함 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio05" class="clear" name="carCheck03" checked />
+                                        <label for="carRadio05">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio06" class="not-clear" name="carCheck03" />
+                                        <label for="carRadio06">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    라. 해체부품의 적정업체로 판매 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio07" class="clear" name="carCheck04" checked />
+                                        <label for="carRadio07">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio08" class="not-clear" name="carCheck04" />
+                                        <label for="carRadio08">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    마. 폐자동차 인수·재활용관리대장의 기록·보존 상태
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio09" class="clear" name="carCheck05" checked />
+                                        <label for="carRadio09">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio10" class="not-clear" name="carCheck05" />
+                                        <label for="carRadio10">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    바. 관리표 작성의 적정성 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio11" class="clear" name="carCheck06" checked />
+                                        <label for="carRadio11">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio12" class="not-clear" name="carCheck06" />
+                                        <label for="carRadio12">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="view-row">
+                                <td rowspan="3" class="text-center">
+                                    2.재활용방법과 기준의 준수 여부 확인
+                                </td>
+                                <td>
+                                    가. 해체작업의 실내실시 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio13" class="clear" name="carCheck07" checked />
+                                        <label for="carRadio13">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio14" class="not-clear" name="carCheck07" />
+                                        <label for="carRadio14">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    나. 유류 누출 등으로 환경에 영향을 미치는 해체부품의 실내보관여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio15" class="clear" name="carCheck08"  />
+                                        <label for="carRadio15">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio16" class="not-clear" name="carCheck08" checked />
+                                        <label for="carRadio16">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>부적정 사유 입력 내용 노출</td>
+                            </tr>
+                            <tr class="view-row">
+                                <td>
+                                    다. 법정분리품 해체 여부<br>
+                                    - 축전지 및 액화가스탱크 제거여부<br>
+                                    - 에어백 등 폭발가능 부품 제거 또는 안정화 여부<br>
+                                    - 연료, 오일류, 부동액(냉각수 포함) 등 액상물질의 분리·배출 및 실내보관 여부<br>
+                                    - 촉매장치 제거 여부<br>
+                                    - 타이어, 연료통 및 범퍼 등 대형 합성수지 제품의 제거여부<br>
+                                    - 전기자동차 폐배터리의 환경부 고시에 따른 분리·보관 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio17" class="clear" name="carCheck09"  />
+                                        <label for="carRadio17">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio18" class="not-clear" name="carCheck09" checked />
+                                        <label for="carRadio18">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>부적정 사유 입력 내용 노출</td>
+                            </tr>
+                            <tr class="view-row">
+                                <td rowspan="3" class="text-center">
+                                    3.기후·생태계 변화유발물질의 회수·보관 및 인계의 여부 확인
+                                </td>
+                                <td>
+                                    가. 폐냉매(CFC, HFC)의 회수 여부<br>
+                                    - 폐냉매 회수기 및 보관용기 보유 여부 확인을 통한 재활용방법과 기준의 적정 이행여부<br>
+                                    - 폐냉매 회수 여부(관리표에 회수량 작성 여부 및 보관용기에 회수 여부 등 확인)
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio19" class="clear" name="carCheck10" checked />
+                                        <label for="carRadio19">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio20" class="not-clear" name="carCheck10" />
+                                        <label for="carRadio20">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <td>
+                                    나. 폐냉매(CFC, HFC)의 보관의 적정성 여부<br>
+                                    - 보관용기의 구분 관리 여부(폐냉매 종류별 표시 등)<br>
+                                    - 보관용기 보관장소의 적정성 여부(바닥 포장, 지붕·벽면 설치, 환기시설 등)
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio21" class="clear" name="carCheck11" checked />
+                                        <label for="carRadio21">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio22" class="not-clear" name="carCheck11" />
+                                        <label for="carRadio22">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+
+                                </td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <td>
+                                    다. 회수한 폐냉매(CFC, HFC)의 폐가스류처리 업자에게 인계 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio23" class="clear" name="carCheck12" checked />
+                                        <label for="carRadio23">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" disabled id="carRadio24" class="not-clear" name="carCheck12" />
+                                        <label for="carRadio24">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                        
+                                </td>
+                            </tr>
+
+                            <!-- 4. 기타 -->
+                            <tr class="view-row">
+                                <td rowspan="3" class="text-center">
+                                    4. 기타
+                                </td>
+                                <td>
+                                    가. 차피에 차량과 관련없는 폐기물을 혼입하여 인계(보관·배출) 여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" id="carRadio25" class="clear" name="carCheck13" checked />
+                                        <label for="carRadio25">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" id="carRadio26" class="not-clear" name="carCheck13" />
+                                        <label for="carRadio26">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                
+                                </td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <td>
+                                    나. 기타 관련법률(폐기물관리법) 위반여부
+                                </td>
+                                <td>
+                                    <!-- 라디오 -->
+                                    <div class="radio-con">
+                                        <input type="radio" id="carRadio27" class="clear" name="carCheck14" checked />
+                                        <label for="carRadio27">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                    <!-- 라디오 end -->
+                                </td>
+                                <td>
+                                    <div class="radio-con">
+                                        <input type="radio" id="carRadio28" class="not-clear" name="carCheck14" />
+                                        <label for="carRadio28">
+                                            <i></i>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                   
+                                </td>
+                            </tr>
+
+                            <tr class="view-row">
+                                <td>
+                                    다. 폐자동차 처리·재활용비용 충당 여부<br>
+                                    (환경성보장제 대상차량 집차 비용 조사)
+                                </td>
+                                
+                                <td colspan="3">
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+
+                     
+                    </table>
+                </div>
+                <!-- 조사결과 end -->
+
+                <!-- 조사일자 start -->
+                <div class="view-box">
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>첨부</span>
+                            </th>
+                            <td class="view-con">
+                                첨부된 리스트
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 조사일자 end -->
+
+                <!-- 조사일자 start -->
+                <div class="view-box">
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>조사일자</span>
+                            </th>
+                            <td class="view-con">
+                                2025-11-11
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 조사일자 end -->
+               
+            </div>
+            <!-- 입력 폼 end -->
+
+            <!-- 입회자/확인자 -->
+            <div class="add-tbl-form">
+                <div class="add-tbl-box">
+                    <table class="add-tbl">
+                        <colgroup>
+                            <col width="128px"/>
+                            <col width=""/>
+                            <col width="170px"/>
+                            <col width="157px"/>
+                        </colgroup>
+                        
+                        <tr>
+                            <th>구분</th>
+                            <th>소속</th>
+                            <th>직책/직급</th>
+                            <th>성명</th>
+                        </tr>
+
+                        <!-- 데이터 생성시 해당 부분 생성 -->
+                        <tr class="add-tbl-con">
+                            <td>
+                                <div class="select-box">
+                                    확인자
+                                </div>
+                            </td>
+                            <td class="align-left">
+                                (주)자몽산업개발
+                            </td>
+                            <td>
+                                차장
+                            </td>
+                            <td>안ㅇㅇ</td>
+                        </tr>
+
+                        <tr class="add-tbl-con">
+                            <td>
+                                <div class="select-box">
+                                    입회자
+                                </div>
+                            </td>
+                            <td class="align-left">
+                                (주)자몽산업개발
+                            </td>
+                            <td>
+                                차장
+                            </td>
+                            <td>안ㅇㅇ</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 입회자/조사자 end -->
+
+            <!-- 확인서 사본 수령자 -->
+            <div class="view-form mgt20">
+                <div class="view-box">
+                    <table class="view-list-tbl t-border-none text-center">
+                        <tr>
+                            <th rowspan="2">
+                                확인서 사본<br>
+                                수령자
+                            </th>
+                            <th>직책</th>
+                            <th>성명</th>
+                            <th>우편발송일</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                차장
+                            </td>
+                            <td>
+                                김ㅇㅇ
+                            </td>
+                            <td>
+                                2025-12-15
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 확인서 사본 수령자 end -->
+
+        </div>
+        <!-- ## contents end -->
+
+    </div>
+</body>
+
+<script>
+    $(document).ready(function(){
+     
+
+    });
+
+
+    
+</script>
+
+</html>

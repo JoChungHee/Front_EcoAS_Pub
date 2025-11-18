@@ -532,6 +532,10 @@
     padding:0px;
 }
 
+.mgt20{
+    margin-top:20px;
+}
+
 /* 컨텐츠 공통 */
 .contents{
     width:100%;
@@ -1228,6 +1232,7 @@
 
 .write-form .write-box .write-tbl .write-row .write-con select,
 .write-form .write-box .write-tbl .write-row .write-con input[type="text"],
+.write-form .write-box .write-tbl .write-row .write-con input[type="number"],
 .write-form .write-box .write-tbl .write-row .write-con textarea{
     width:100%;
     height:40px;
@@ -1237,6 +1242,14 @@
     font-weight:500;
     padding:0 14px;
 }
+
+.write-form .write-box .write-tbl .write-row .write-con input[type="number"]::-webkit-outer-spin-button,
+.write-form .write-box .write-tbl .write-row .write-con input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+}
+
 
 .write-form .write-box .write-tbl .write-row .write-con input[type="text"]:read-only,
 .write-form .write-box .write-tbl .write-row .write-con textarea:read-only{
@@ -1367,6 +1380,15 @@
     border-right:0;
 }
 
+.add-tbl-form .add-tbl-box .add-tbl tr + tr th{
+    border-top:1px solid #d3d7dc;
+    border-right:1px solid #d3d7dc;
+}
+
+.add-tbl-form .add-tbl-box .add-tbl tr + tr th:last-child{
+    border-right: 1px solid #d3d7dc;
+}
+
 .add-tbl-form .add-tbl-box .add-tbl tr td{
     background:#fafbfc;
     height:50px;
@@ -1377,7 +1399,7 @@
     font-family: 'Noto Sans KR' !important;
     border-top:1px solid #d3d7dc;
     border-right:1px solid #d3d7dc;
-    padding:0 20px;
+    padding:0 10px;
 }
 
 .add-tbl-form .add-tbl-box .add-tbl tr td:last-child{
@@ -1405,6 +1427,38 @@
     background-position: right center;;
 }
 
+.add-tbl-form .add-tbl-box .add-tbl tr td .input-box{
+    width:100%;
+}
+
+.add-tbl-form .add-tbl-box .add-tbl tr td .input-cont{
+    width:100%;
+}
+
+.add-tbl-form .add-tbl-box .add-tbl tr.tbl-total{
+    display:none;
+}
+
+.add-tbl-form .add-tbl-box .add-tbl tr.tbl-total.show{
+    display:table-row !important;
+}
+
+.add-tbl-form .add-tbl-box .add-tbl tr.tbl-total td{
+    background:#f0f3f4;
+    font-weight:600;
+}
+
+
+.add-tbl-form .add-tbl-box .add-tbl tr td input[type="number"]::-webkit-outer-spin-button,
+.add-tbl-form .add-tbl-box .add-tbl tr td input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+}
+
+
+
+
 /* 입력 리스트 테이블 */
 .write-list-tbl{
     width:100%;
@@ -1423,6 +1477,10 @@
     padding:5px 10px;
 }
 
+.write-list-tbl.t-border-none tr th{
+    border-top:0;
+}
+
 .write-list-tbl tr td{
     height:40px;
     border-right:1px solid #e5e9eb;
@@ -1432,6 +1490,7 @@
     color:#363738;
     font-family: 'Noto Sans KR' !important;
     line-height:1.3;
+    word-break: keep-all;
 }
 
 .write-list-tbl tr th:last-child,
@@ -1475,9 +1534,67 @@
 
 .write-list-tbl tr td .input-box{
     width:100%;
+    height:100%;
+}
+
+.write-list-tbl tr td .input-box .text-cont{
+    width:100%;
+    border:1px solid #d3d7dc ;
+    border-radius: 5px;
+    height:100%;
+    padding:5px;
+    font-size:13px;
+    font-family: 'Noto Sans KR' !important;
 }
 
 .write-list-tbl tr td .input-box .input-cont{
+    width:100%;
+    font-family: 'Noto Sans KR' !important;
+}
+
+.write-list-tbl tr td .input-box textarea.input-cont{
+    padding:5px;
+    box-sizing:border-box !important;
+    width:100%;
+    height:100%;
+    font-size:13px;
+    font-family: 'Noto Sans KR' !important;
+}
+
+.write-list-tbl tr td .date-box{
+    width:100%;
+    position: relative;
+    width:100%;
+}
+
+.write-list-tbl tr td .date-box .input-date{
+    width:100%;
+    background:#fff;
+    padding:0 5px;
+    border-radius: 5px;
+    height:31px;
+}
+
+.write-list-tbl tr td .date-box .input-date:focus{
+    border:1px solid #0097a7;
+}
+
+.write-list-tbl tr td .date-box .input-date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  background: none;
+}
+
+.write-list-tbl tr td .date-box .date-btn{
+    border:0;
+    background:none;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translate( -0, -50% );
+    width:15px;
+}
+
+.write-list-tbl tr td .date-box .date-btn img{
     width:100%;
 }
 
@@ -1510,6 +1627,7 @@
 .write-tbl tr td .date-box .date-btn img{
     width:100%;
 }
+
 
 
 /* VIEW 테이블 */
@@ -1675,6 +1793,7 @@
     color:#363738;
     font-family: 'Noto Sans KR' !important;
     line-height:1.3;
+    word-break: keep-all;
 }
 
 .view-list-tbl tr th:last-child,

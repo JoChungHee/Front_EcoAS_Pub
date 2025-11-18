@@ -94,22 +94,17 @@
         <!-- ## contents start -->
         <div class="contents">
             <!-- 공통 페이지 타이틀 -->
-            <div class="page-title">의무이행 실태 현장조사</div>
+            <div class="page-title">평균중량/소재구성비 현장조사</div>
 
             <!-- 서브 타이틀 -->
             <!-- 앞에 뱃지 있을경우 bage 클레스 추가 -->
             <div class="page-sub-title bage new-write">
-                재활용의무이행실태 조사결과
+                폐전기·폐전자제품 소재구성비 조사결과
             </div>
 
             <!-- 입력 폼 -->
             <div class="write-form">
-                <!-- 일반현황 start -->
                 <div class="write-box">
-                    <div class="tbl-title">
-                        ※ 일반현황
-                    </div>
-
                     <table class="write-tbl">
                         <colgroup>
                             <col width="124px"/>
@@ -117,399 +112,186 @@
                             <col width="124px"/>
                             <col width=""/>
                         </colgroup>
+                        <tr class="write-row">
+                            <th class="write-title">
+                                <span class="required">이행년도</span>
+                            </th>
+                            <td class="write-con">
+                                <div class="select-box">
+                                    <!-- 25.11.06 이행년도 테스트용 데이터 추가 -->
+                                    <select class="year-sleect">
+                                        <option data-value="old-year">2025년</option>
+                                        <option data-value="new-year">2026년</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th></th>
+                            <td></td>
+                        </tr>
                         <tr class="write-row">
                             <th class="write-title">
                                 <span class="required">업체명</span>
                             </th>
                             <td class="write-con">
                                 <div class="search-box">
-                                    <input type="text" class="input-cont"/>
+                                    <input type="text" class="input-cont" readonly/>
                                     <button type="button" class="search-btn" onclick="companyListOpen();">
                                         <img src="../../../resources/images/common/search_ico_b.png"/>
                                     </button>
                                 </div>
                             </td>
                             <th class="write-title">
-                                <span>대표자명</span>
-                            </th>
-                            <td class="write-con">
-                                <div class="text-box">
-                                    <input type="text" class="input-cont" readonly value="안OO" />
-                                </div>
-                            </td>
-                           
-                        </tr>
-
-                        <tr class="write-row">
-                            <th class="write-title" >
-                                <span>주소</span>
-                            </th>
-                            <td colspan="3" class="write-con">
-                                <div class="area-box">
-                                    <input type="text" class="input-cont" readonly value="인천광역시 서구 정서진로 410, A동 125호(오류동, 창업벤터녹색융합클러스터)" />
-                                </div>
-                            </td>
-                        </tr>
-
-                     
-                    </table>
-                </div>
-                <!-- 일반현황 end -->
-
-                <!-- 조사결과 start -->
-                <div class="write-box">
-                    <div class="tbl-title">
-                        ※ 재활용의무이행실태 조사결과
-                    </div>
-
-                    <table class="write-list-tbl">
-                        <colgroup>
-                            <col width="100px" />
-                            <col width="220px" />
-                            <col width="80px" />
-                            <col width="80px" />
-                            <col width="" />
-                        </colgroup>
-                        <thead>
-                            <tr class="write-row">
-                                <th class="write-title" rowspan="2" colspan="2">
-                                    구분
-                                </th>
-                                <th class="write-title" colspan="2">
-                                    확인결과
-                                </th>
-                                <th class="write-title" rowspan="2">
-                                    부적정 사유
-                                </th>
-                            </tr>
-
-                            <tr class="write-row">
-                                <th class="write-title">적정</th>
-                                <th class="write-title border-r">부적정</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="write-row">
-                                <td rowspan="6" class="text-center">
-                                    재활용의무<br>
-                                    이행계획<br>
-                                    승인서<br>
-                                    관련사항
-                                </td>
-                                <td>
-                                    ① 의무생산자와 적정계약 여부
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio01" class="clear" name="dutyCheck01" checked />
-                                        <label for="dutyRadio01">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio02" class="not-clear" name="dutyCheck01" />
-                                        <label for="dutyRadio02">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td>
-                                    ② 적법한 허가업체 여부
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio03" class="clear" name="dutyCheck02" checked />
-                                        <label for="dutyRadio03">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio04" class="not-clear" name="dutyCheck02" />
-                                        <label for="dutyRadio04">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td>
-                                    ③ 의무대상품 재활용 여부
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio05" class="clear" name="dutyCheck03" checked />
-                                        <label for="dutyRadio05">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio06" class="not-clear" name="dutyCheck03" />
-                                        <label for="dutyRadio06">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td>
-                                    ④ 시설용량 확보 여부
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio07" class="clear" name="dutyCheck04" checked />
-                                        <label for="dutyRadio07">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio08" class="not-clear" name="dutyCheck04" />
-                                        <label for="dutyRadio08">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td>
-                                    ⑤ 의무대상품 회수의 적정 여부
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio09" class="clear" name="dutyCheck05" checked />
-                                        <label for="dutyRadio09">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio10" class="not-clear" name="dutyCheck05" />
-                                        <label for="dutyRadio10">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td>
-                                    ⑥ 재활용방법 및 기준 합당 여부
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio11" class="clear" name="dutyCheck06" checked />
-                                        <label for="dutyRadio11">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio12" class="not-clear" name="dutyCheck06" />
-                                        <label for="dutyRadio12">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td colspan="2">
-                                    ⑦ 관리표 작성 및 제출의 적정 여부 
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio13" class="clear" name="dutyCheck07" checked />
-                                        <label for="dutyRadio13">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio14" class="not-clear" name="dutyCheck07" />
-                                        <label for="dutyRadio14">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td colspan="2">
-                                    ⑧ 재활용 재위탁여부
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio15" class="clear" name="dutyCheck08" checked />
-                                        <label for="dutyRadio15">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio16" class="not-clear" name="dutyCheck08" />
-                                        <label for="dutyRadio16">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td colspan="2">
-                                    ⑨ 재활용의무이행 적정업체 여부
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio17" class="clear" name="dutyCheck09" checked />
-                                        <label for="dutyRadio17">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio18" class="not-clear" name="dutyCheck09" />
-                                        <label for="dutyRadio18">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="write-row">
-                                <td colspan="2">
-                                    ⑩ 기타사항
-                                </td>
-                                <td>
-                                    <!-- 라디오 -->
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio19" class="clear" name="dutyCheck10" checked />
-                                        <label for="dutyRadio19">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                    <!-- 라디오 end -->
-                                </td>
-                                <td>
-                                    <div class="radio-con">
-                                        <input type="radio" id="dutyRadio20" class="not-clear" name="dutyCheck10" />
-                                        <label for="dutyRadio20">
-                                            <i></i>
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="input-box">
-                                        <textarea class="input-cont" rows="1" disabled></textarea>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-
-                     
-                    </table>
-                </div>
-                <!-- 조사결과 end -->
-
-                <!-- 조사일자 start -->
-                <div class="write-box">
-                    <table class="write-tbl">
-                        <colgroup>
-                            <col width="124px"/>
-                            <col width=""/>
-                            <col width="124px"/>
-                            <col width=""/>
-                        </colgroup>
-                        <tr class="write-row">
-                            <th class="write-title">
-                                <span>조사일자</span>
+                                <span class="required">조사일시</span>
                             </th>
                             <td class="write-con">
                                 <div class="date-box">
-                                    <input type="date" class="input-cont input-date"/>
-                                    <button type="button" class="date-btn">
-                                        <img src="../../../resources/images/common/calendar_ico.png"/>
+                                    <!-- 사용하는 플러그인 datepicker 연결 -->
+                                    <input type="text" placeholder="2025-09-16" class="date-input" readonly />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="write-row">
+                            <th class="write-title">
+                                <span>조사품목</span>
+                            </th>
+                            <td class="write-con">
+                                <div class="search-box">
+                                    <input type="text" class="input-cont" readonly/>
+                                    <button type="button" class="search-btn" onclick="itemAddPop();">
+                                        <img src="../../../resources/images/common/search_ico_b.png"/>
                                     </button>
+                                </div>
+                            </td>
+                            <th class="write-title">
+                                <span>표본중량(kg)</span>
+                            </th>
+                            <td class="write-con">
+                                <div class="input-box">
+                                    <input type="number" class="input-cont"/>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="write-row">
+                            <th class="write-title">
+                                <span>순중량(kg)</span>
+                            </th>
+                            <td class="write-con">
+                                <div class="input-box">
+                                    <input type="number" class="input-cont"/>
+                                </div>
+                            </td>
+                            <th class="write-title">
+                                <span>조사수율(%)</span>
+                            </th>
+                            <td class="write-con">
+                                <div class="input-box">
+                                    <input type="number" class="input-cont"/>
                                 </div>
                             </td>
                         </tr>
                     </table>
                 </div>
-                <!-- 조사일자 end -->
-               
+
+                
             </div>
             <!-- 입력 폼 end -->
+
+            <!-- 품목 -->
+            <div class="add-tbl-form">
+                <div class="add-tbl-head">
+                    <div class="btn-box">
+                        <button class="btn-new btn-focus add-btn" onclick="materialAdd();" type="button">
+                            <span>소재/폐기물</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="add-tbl-box">
+                    <table class="add-tbl material-tbl">
+                        <colgroup>
+                            <col width="50px"/>
+                            <col width="20%"/>
+                            <col width=""/>
+                            <col width="70px"/>
+                            <col width="15%"/>
+                            <col width="15%"/>
+                            <col width="15%"/>
+                        </colgroup>
+                        
+                        <tr>
+                            <th rowspan="3">삭제</th>
+                            <th rowspan="3">구분</th>
+                            <th rowspan="3">세부구분</th>
+                            <th rowspan="3">중량</th>
+                            <th colspan="3">공급현황</th>
+                        </tr>
+                        <tr>
+                            <th>세금계산서</th>
+                            <th colspan="2">공급받는 자</th>
+
+                        </tr>
+                        <tr>
+                            <th>품목명</th>
+                            <th>업체명</th>
+                            <th>폐기물처리 허가업종</th>
+                        </tr>
+
+                        <!-- 상단 total tr -->
+                        <tr class="tbl-total">
+                            <td colspan="3">합계</td>
+                            <td class="count-total"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <!-- 상단 total tr END -->
+
+                        <!-- 데이터 생성시 해당 부분 생성 -->
+                        <tr class="add-tbl-con">
+                            <td>
+                                <button type="button" class="tbl-delete-btn">
+                                    <img src="../../../resources/images/common/delete_ico_box.png"/>
+                                </button>
+                            </td>
+                            <td>
+                                <div class="select-box">
+                                    <select>
+                                        <option>선택</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-box">
+                                    <input type="text" class="input-cont" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-box">
+                                    <input type="number" class="input-cont text-center count-number" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-box">
+                                    <input type="text" class="input-cont" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-box">
+                                    <input type="text" class="input-cont" />
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-box">
+                                    <input type="text" class="input-cont" />
+                                </div>
+                            </td>
+                            
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <!-- 품목 end -->
 
             <!-- 입회자/조사자 -->
             <div class="add-tbl-form">
@@ -691,6 +473,8 @@
                                             </td>
                                         </tr>
                                         <!-- loop end -->
+
+                                        
                                     </tbody>
                                 </table>
                             </div>
@@ -710,6 +494,100 @@
             
         </div>
         <!-- 업체리스트 팝업 end -->
+
+        <!-- 품목추가 팝업 -->
+        <div class="layer-pop" id="itemListPop">
+            <div class="layer-form">
+                <div class="layer-box">
+                    <div class="layer-header">
+                        <div class="layer-title">
+                            품목 추가
+                        </div>
+                        <button onclick="layerClose();" type="button" class="layer-close-ico">
+                            <img src="../../../resources/images/common/layer_close_ico.png"/>
+                        </button>
+                    </div>
+                    <div class="layer-body">
+                        <div class="item-list-form">
+                            <ul class="item-list-box">
+                                <!-- 
+                                    클레스 분기
+                                    1. 추가 클레스 없음 = 전체 노출
+                                    2. old-type 클레스 = ~ 2025년 노출
+                                    3. new-type 클레스 = 2026년 ~ 노출
+                                -->
+                                <li class="item-list-con">
+                                    <div class="title">제품군</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-list-con old-type">
+                                    <div class="title">제품명</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-list-con new-type">
+                                    <div class="title">대상제품</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-list-con new-type">
+                                    <div class="title">품목</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="item-list-con">
+                                    <div class="title">세부제품</div>
+                                    <div class="item-cont">
+                                        <div class="select-box">
+                                            <select>
+                                                <option>전체</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layer-bottom">
+                        <div class="layer-btn-box">
+                            <button class="btn-new btn-focus" type="button" onclick="itemAddBtn();">
+                                <span>추가</span>
+                            </button>
+                            <button class="btn-new btn-gray" type="button" onclick="layerClose();">
+                                <span>닫기</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 품목추가 팝업 end -->
     </div>
 </body>
 
@@ -773,6 +651,7 @@
         // -------------------------
         $(document).on("click", ".tbl-delete-btn", function() {
             $(this).closest("tr").remove();
+            totalTrSet();
         });
 
         // -------------------------
@@ -805,29 +684,130 @@
             updateManagerType($(this));
         });
 
-        /* 적정/부적정 라디오 set */
-        $("input[type='radio']").on("change", function(){
-            var $row = $(this).closest("tr");
-            var $textInput = $row.find(".input-box .input-cont");
+        //초기 실행
+        totalTrSet();
 
-            if ($(this).hasClass("not-clear")) {
-                $textInput.prop("disabled", false);
-            } else if ($(this).hasClass("clear")) {
-                $textInput.prop("disabled", true).val("");
-            }
+        // 입력시 count 계산
+        $(document).on("input", ".material-tbl .count-number", function(){
+            numberCount();
         });
-
     });
 
-    /* 업체 팝업 오픈 추가 */
+    /* 25.11.06 업체 팝업 오픈 추가 */
     function companyListOpen(){
         $("#companyListPop").fadeIn();
         layerOpenScorllSet();
         
+        // 팝업 테이블 셋팅 25.11.06 추가
+        // 데이터 불러온 후 함수실행 추천 ( document로 작동시 데이터 불러온 후 인식이 안될 수도 있음 )
+        // 적용 범위 1 = 팝업 실행 시 데이터 불러온 후 해당 함수 적용
+        // 적용 범위 2 = 테이블 검색 후 데이터 불러온 후 해당 함수 적용
         layerListTblHeightSet();
     }
 
-    
+    /* 25.11.06 품목 추가 팝업 추가 */
+    function itemAddPop(){
+        var $selected = $(".year-sleect option:selected");
+        var yearValue = $selected.data("value"); // 현재 선택된 data-value 값
+
+        // data-value 값에 따라 분기 처리
+        if (yearValue === "old-year") {
+            $(".old-type").addClass('active');
+            $(".new-type").removeClass('active');
+        } else if (yearValue === "new-year") {
+            $(".new-type").addClass('active');
+            $(".old-type").removeClass('active');
+        } else {
+            //추후 경우의수 추가용
+        }
+
+        $("#itemListPop").fadeIn();
+        layerOpenScorllSet();
+
+    }
+
+    /* 25.11.06 품목 추가 버튼 */
+    function itemAddBtn(){
+        $("#itemListPop").fadeOut();
+        layerCloseScorllSet();
+
+        // 추후 추가 버튼 클릭시 해당 함수에 개발 or 위 2가지 스크립트 가지고 가주세요.
+    }
+
+    /* 합계 tr on/off */
+    function totalTrSet(){
+        var materialContCount = $(".material-tbl .add-tbl-con").length;
+
+        if(materialContCount >= 1){
+            $(".material-tbl .tbl-total").addClass('show');
+        }else{
+            $(".material-tbl .tbl-total").removeClass('show');
+        }
+
+        numberCount();
+    }
+
+    /* 합계 */
+    function numberCount(){
+        var countTotal = 0;
+
+        $(".material-tbl .count-number").each(function(){
+            var val = parseFloat($(this).val()) || 0;
+            countTotal += val;
+        });
+
+        $(".count-total").text(countTotal);
+    }
+
+    /* 소재/폐기물 생성 */
+    function materialAdd(){
+        var newRow = `
+        <tr class="add-tbl-con">
+            <td>
+                <button type="button" class="tbl-delete-btn">
+                    <img src="../../../resources/images/common/delete_ico_box.png"/>
+                </button>
+            </td>
+            <td>
+                <div class="select-box">
+                    <select>
+                        <option>선택</option>
+                    </select>
+                </div>
+            </td>
+            <td>
+                <div class="input-box">
+                    <input type="text" class="input-cont" />
+                </div>
+            </td>
+            <td>
+                <div class="input-box">
+                    <input type="number" class="input-cont text-center count-number" />
+                </div>
+            </td>
+            <td>
+                <div class="input-box">
+                    <input type="text" class="input-cont" />
+                </div>
+            </td>
+            <td>
+                <div class="input-box">
+                    <input type="text" class="input-cont" />
+                </div>
+            </td>
+            <td>
+                <div class="input-box">
+                    <input type="text" class="input-cont" />
+                </div>
+            </td>
+            
+        </tr>
+        `;
+        // 테이블 마지막에 추가
+        $(newRow).appendTo(".material-tbl");
+        totalTrSet();
+
+    }
 </script>
 
 </html>
