@@ -129,6 +129,12 @@ $(document).ready(function(){
         
     });
 
+    /* textarea 자동 사이즈 */
+    $(document).on("input", ".auto-size", function () {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    });
+
 });
 
 /* 공통 list table filter on/off */

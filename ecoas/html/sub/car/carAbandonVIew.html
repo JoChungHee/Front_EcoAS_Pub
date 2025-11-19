@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAS 법정서식 업무시스템</title>
+
+    <!-- CSS SET -->
+    <!-- 기존 프로젝트 CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/admin.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/filestyle.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/layer.pop.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/select2.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-production-plugins.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-production.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-rtl.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/smartadmin-skins.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style1.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style_eco.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/style_renewal.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/swiper.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/old/toggle.css" />
+
+    <!-- 신규 추가 CSS 해당 부분만 신규 반영 -->
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/ecoas_contents.css" />
+
+    <!-- SCRIPT SET -->
+    <script src="../../../resources/js/jquery-3.7.1.js"></script>
+    <script src="../../../resources/js/swiper-bundle.min.js"></script>
+    <script src="../../../resources/js/ecoas_common.js"></script>
+</head>
+<body>
+    <div class="new-container">
+        <!-- ## header start -->
+        <div class="header-form">
+            <div class="header-top">
+                <div class="logo-box">
+                    <i class="logo">
+                        <img src="../../../resources/images/common/logo.png"/>
+                    </i>
+                    <p>법정서식 업무시스템</p>
+                </div>
+                <div class="user-box">
+                    <span class="user-name">OOO</span>님 환영합니다.
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="menu-box">
+                    <div class="select-box">
+                        <select class="menu-list">
+                            <option value="" >선택하세요</option>
+                            <option value="" >의무이행 실태 현황조사</option>
+                            <option value="" >매입·판매/출고·수입 실적 현장조사</option>
+                            <option value="" >평균중량/소재구성비 현장조사</option>
+                            <option value="" >비대상 혼입비율 현장조사</option>
+                            <option value="" >자동차해체재활용업자 재활용의무이행결과 점검</option>
+                            <option value="" >파쇄재활용업자 재활용의무이행결과 점검표</option>
+                            <option value="" >파쇄잔재물재활용업자 재활용의무이행결과 점검</option>
+                            <option value="" >폐가스류처리업자 재활용의무이행결과 점검</option>
+                            <option value="" >폐자동차 확인</option>
+                            <option value="" >사업장방문통보서 현장조사</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="out-box">
+                    <div class="logout">
+                        <button type="button" class="logout-btn" >
+                            로그아웃
+                        </button>
+                    </div>
+                    <div class="login-count">
+                        <div class="time-count">
+                            <span class="count" data-count="10:00" >00:00</span>
+                        </div>
+                        <button type="button" class="time-extend">
+                            시간연장
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ## header End -->
+
+        <!-- ## contents start -->
+        <div class="contents">
+            <!-- 공통 페이지 타이틀 -->
+            <div class="page-title">폐자동차 확인</div>
+
+            <!-- 서브 타이틀 -->
+            <div class="page-sub">
+                <div class="page-sub-title">
+                    확인서
+                </div>
+
+                <div class="page-sub-btn" >
+                    <a href="javascript:;" class="btn-new btn-white">
+                        <span>수정</span>
+                    </a>
+                    <a href="javascript:;" class="btn-new btn-white">
+                        <span>삭제</span>
+                    </a>
+                    <a href="javascript:;" class="btn-new btn-print">
+                        <span>리포트 출력</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 입력 폼 -->
+            <div class="view-form">
+                <!-- 사업장 정보 start -->
+                <div class="view-box">
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>사업장명</span>
+                            </th>
+                            <td class="view-con">
+                                (주)자몽산업개발
+                            </td>
+                            <th class="view-title">
+                                <span>대표자</span>
+                            </th>
+                            <td class="view-con">
+                                김ㅇㅇ
+                            </td>
+                           
+                        </tr>
+
+                        <tr class="view-row">
+                            <th class="view-title" >
+                                <span>주소</span>
+                            </th>
+                            <td colspan="3" class="view-con">
+                                인천광역시 서구 정서진로 410, A동 125호(오류동, 창업벤터녹색융합클러스터)
+                            </td>
+                        </tr>
+
+                     
+                    </table>
+                </div>
+                <!-- 사업장 정보 end -->
+
+                <!-- 내용 기입 start -->
+                <div class="view-box">
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>확인일</span>
+                            </th>
+                            <td class="view-con">
+                               2025-09-16
+                            </td>
+                            <th class="view-title">
+                                <span>확인시각</span>
+                            </th>
+                            <td class="view-con pd0">
+                                <div class="time-box">
+                                    <div class="time-con">
+                                        <span class="time-txt">17</span>
+                                        <span>시</span>
+                                    </div>
+                                   
+                                    <div class="time-con">
+                                        <span class="time-txt">20</span>
+                                        <span>분</span>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>관련 법조항</span>
+                            </th>
+                            <td class="view-con pre-con" colspan="3">전기전자제품등자원순환법 체31조제1항
+전기전자제품등자원순환법 체31조제2항
+전기전자제품등자원순환법 체31조제3항</td>
+                        </tr>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>위반내용</span>
+                            </th>
+                            <td class="view-con pre-con" colspan="3">폐자동차 재활용결과보고서 제출 의무의 불이행
+- 자동차해체재활용업자는 매분기 종료 후 15일 이내에 재활용결과보고서를주무처에 제출하여야 하나, 2025년 1분기 1건의 재활용결과보고서를 지연 제출한 사실을 확인함.
+* 2025년 1분기(2025.5.1. 제출)</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 내용 기입 end -->
+
+
+                <!-- 조사일자 start -->
+                <div class="view-box">
+                    <table class="view-tbl">
+                        <colgroup>
+                            <col width="124px"/>
+                            <col width=""/>
+                            <col width="124px"/>
+                            <col width=""/>
+                        </colgroup>
+                        <tr class="view-row">
+                            <th class="view-title">
+                                <span>작성일</span>
+                            </th>
+                            <td class="view-con">
+                                2025-11-11
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 조사일자 end -->
+               
+            </div>
+            <!-- 입력 폼 end -->
+
+            <!-- 입회자/확인자 -->
+            <div class="add-tbl-form">
+                <div class="add-tbl-box">
+                    <table class="add-tbl">
+                        <colgroup>
+                            <col width="128px"/>
+                            <col width=""/>
+                            <col width="170px"/>
+                            <col width="157px"/>
+                        </colgroup>
+                        
+                        <tr>
+                            <th>구분</th>
+                            <th>소속</th>
+                            <th>직책/직급</th>
+                            <th>성명</th>
+                        </tr>
+
+                        <!-- 데이터 생성시 해당 부분 생성 -->
+                        <tr class="add-tbl-con">
+                            <td>
+                                <div class="select-box">
+                                    확인자
+                                </div>
+                            </td>
+                            <td class="align-left">
+                                (주)자몽산업개발
+                            </td>
+                            <td>
+                                차장
+                            </td>
+                            <td>안ㅇㅇ</td>
+                        </tr>
+
+                        <tr class="add-tbl-con">
+                            <td>
+                                <div class="select-box">
+                                    입회자
+                                </div>
+                            </td>
+                            <td class="align-left">
+                                (주)자몽산업개발
+                            </td>
+                            <td>
+                                차장
+                            </td>
+                            <td>안ㅇㅇ</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 입회자/조사자 end -->
+
+            <!-- 확인서 사본 수령자 -->
+            <div class="view-form mgt20">
+                <div class="view-box">
+                    <table class="view-list-tbl t-border-none text-center">
+                        <tr>
+                            <th rowspan="2">
+                                확인서 사본<br>
+                                수령자
+                            </th>
+                            <th>직책</th>
+                            <th>성명</th>
+                            <th>우편발송일</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                차장
+                            </td>
+                            <td>
+                                김ㅇㅇ
+                            </td>
+                            <td>
+                                2025-12-15
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 확인서 사본 수령자 end -->
+
+        </div>
+        <!-- ## contents end -->
+
+    </div>
+</body>
+
+<script>
+    $(document).ready(function(){
+     
+
+    });
+
+
+    
+</script>
+
+</html>
