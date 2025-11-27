@@ -187,9 +187,10 @@
 }
 
 .check-box label{
-    display:flex;
+    display:flex !important;
     align-items: center;
     padding:0 !important;
+    gap:4px;
 }
 
 .check-box label i{
@@ -226,6 +227,22 @@
     font-family: 'Noto Sans KR' !important;
 }
 
+.check-box.summary-check{
+    width:100%;
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+
+.check-box.summary-check label span{
+    white-space: nowrap;
+}
+
+.check-box.summary-check .input-box{
+    width:100%;
+    max-width:100%;
+}
+
 /* radio box */
 .radio-box{
     display:flex;
@@ -239,7 +256,8 @@
 }
 
 .radio-con label{
-    display:flex;
+    display:flex !important;
+    gap:4px;
     align-items: center;
     padding:0 !important;
 }
@@ -252,6 +270,12 @@
     height:20px;
     border-radius: 20px;
     border:1px solid #d3d7dc;
+}
+
+.radio-con label span{
+    font-size:14px;
+    color:#363738;
+    font-weight:500;
 }
 
 .radio-con label:hover i{
@@ -572,6 +596,17 @@
     display:flex;
     align-items: center;
     gap: 9px;
+}
+
+.contents .section-title{
+    font-size:14px;
+    font-weight:700;
+    color:#363738;
+    margin-top:20px;
+    padding:10px;
+    border:1px solid #ddd;
+    background:#f6f8f9;
+    border-radius: 4px;
 }
 
 .contents .page-sub .page-sub-btn{
@@ -1363,6 +1398,12 @@
     margin-top:20px;
 }
 
+.add-tbl-form .add-tbl-title{
+    font-size:14px;
+    font-weight:500;
+    color:#363738;
+}
+
 .add-tbl-form .add-tbl-head{
     width: 100%;
     display:flex;
@@ -1421,6 +1462,11 @@
     padding:0 10px;
 }
 
+.add-tbl-form .add-tbl-box .add-tbl tr.add-total td{
+    background:#f0f3f4;
+    font-weight:500;
+}
+
 .add-tbl-form .add-tbl-box .add-tbl tr td:last-child{
     border-right:0;
 }
@@ -1474,6 +1520,44 @@
     margin: 0;
     -moz-appearance: textfield;
 }
+
+
+.add-tbl tr td .date-box{
+    width:100%;
+    position: relative;
+}
+
+.add-tbl tr td .date-box .input-date{
+    width:100%;
+    background:#fff;
+    padding:0 5px;
+    border-radius: 5px;
+    height:31px;
+}
+
+.add-tbl tr td .date-box .input-date:focus{
+    border:1px solid #0097a7;
+}
+
+.add-tbl tr td .date-box .input-date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  background: none;
+}
+
+.add-tbl tr td .date-box .date-btn{
+    border:0;
+    background:none;
+    position: absolute;
+    right:10px;
+    top:50%;
+    transform: translate( -0, -50% );
+    width:15px;
+}
+
+.add-tbl tr td .date-box .date-btn img{
+    width:100%;
+}
+
 
 
 
@@ -1583,7 +1667,6 @@
 .write-list-tbl tr td .date-box{
     width:100%;
     position: relative;
-    width:100%;
 }
 
 .write-list-tbl tr td .date-box .input-date{
@@ -2025,6 +2108,54 @@
     display:flex;
 }
 
+#itemListPop02 .layer-form .layer-box{
+    max-width:440px;
+}
+
+#itemListPop02 .item-list-form{
+    width:100%;
+}
+
+#itemListPop02 .item-list-form .item-list-box{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+#itemListPop02 .item-list-form .item-list-box .item-list-con{
+    display:flex;
+    align-items: center;
+}
+
+#itemListPop02 .item-list-form .item-list-box .item-list-con .title{
+    width:62px;
+    font-size:13px;
+    font-weight:700;
+    color:#363738;
+}
+
+#itemListPop02 .item-list-form .item-list-box .item-list-con .item-cont{
+    width:calc( 100% - 62px );
+}
+
+#itemListPop02 .item-list-form .item-list-box .item-list-con .item-cont .select-box{
+    width:100%;
+}
+
+#itemListPop02 .item-list-form .item-list-box .item-list-con .item-cont .select-box select{
+    width:100%;
+}
+
+#itemListPop02 .item-list-form .item-list-box .item-list-con.old-type,
+#itemListPop02 .item-list-form .item-list-box .item-list-con.new-type{
+    display:none;
+}
+
+#itemListPop02 .item-list-form .item-list-box .item-list-con.old-type.active,
+#itemListPop02 .item-list-form .item-list-box .item-list-con.new-type.active{
+    display:flex;
+}
 
 
 
