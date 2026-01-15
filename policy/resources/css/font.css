@@ -1,0 +1,63 @@
+/* Noto Sans CJK KR */
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 100;
+	src: url('font/NotoSansKr/NotoSansKR-Thin.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 200;
+	src: url('font/NotoSansKr/NotoSansKR-ExtraLight.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 300;
+	src: url('font/NotoSansKr/NotoSansKR-Light.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 400;
+	src: url('font/NotoSansKr/NotoSansKR-Regular.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 500;
+	src: url('font/NotoSansKr/NotoSansKR-Medium.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 600;
+	src: url('font/NotoSansKr/NotoSansKR-SemiBold.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 700;
+	src: url('font/NotoSansKr/NotoSansKR-Bold.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 800;
+	src: url('font/NotoSansKr/NotoSansKR-ExtraBold.ttf') format('ttf'),
+}
+
+@font-face {
+	font-family: 'NotoSansKR';
+	font-display: swap;
+	font-weight: 900;
+	src: url('font/NotoSansKr/NotoSansKR-Black.ttf') format('ttf'),
+}

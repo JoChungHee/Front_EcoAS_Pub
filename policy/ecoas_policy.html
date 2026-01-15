@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>약관 페이지 퍼블</title>
+
+    <!-- S: 적용 필요 없음 -->
+    <link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+    
+
+    <script src="resources/js/jquery-3.7.1.js"></script>
+     <!-- E: 적용 필요 없음 -->
+
+    <style>
+        /* S: 페이지 샘플 작업 - 적용 필요 없는 영역 */
+        *{color:#20272e; font-family: 'NotoSansKR' !important;}
+        img{display: block;}
+        header{width:100%;background:url("resources/images/sample/ecoas_header_bg.png") repeat-x center;}
+        header img{margin:0 auto; display:block;}
+        footer{width:100%;background:url("resources/images/sample/ecoas_footer_bg.png") repeat-x center;}
+        footer img{margin:0 auto; display:block;}
+        .container{width:1262px; margin:0 auto; display:flex; height:auto;}
+        .container .contents{width:100%;}
+        .container .contents .cont{width:100%; margin-top:40px;}
+       
+        /* E: 페이지 샘플 작업 - 적용 필요 없는 영역 */
+
+        /* S: 해당 영역 적용
+            - 퍼블 파일은 inline으로 작업 필요시 사용하는 css에 붙여넣기 해주세요.
+            - 해당 페이지에서 사용되는 css들의 모든 구조 파악이 불가능한 작업 환경 
+            - 위 경우로 만약 css충돌로 깨질시 문의 부탁드립니다.
+        */
+
+        .new-policy-title{
+            width:100%;
+            text-align: center;
+            font-size:18px;
+            font-weight:500;
+            color:#000;
+            letter-spacing: -1px;
+        }
+
+        .new-policy-form{
+            width:100%;
+            padding-bottom:100px;
+            margin-top:20px;
+        }
+
+        .new-policy-form .policy-gray-box{
+            width:100%;
+            padding:20px;
+            background:#f5f5f5;
+            border:1px solid #c5d1db;
+            border-radius: 5px;
+            font-size:14px;
+            font-weight:500;
+            color:#000;
+            line-height:1.5;
+            letter-spacing: -0.4px;
+        }
+
+        .new-policy-form .policy-box{
+            width:100%;
+            margin-top:35px;
+        }
+
+        .new-policy-form .policy-box .policy-title{
+            font-size:16px;
+            font-weight:500;
+            color:#000;
+            position: relative;
+            padding-left:16px;
+            letter-spacing: -1px;
+        }
+
+        .new-policy-form .policy-box .policy-title::before{
+            content:"";
+            display:block;
+            width:6px;
+            height:6px;
+            border-radius: 6px;
+            background:#212121;
+            position: absolute;
+            left:2px;
+            top:7px;
+        }
+
+        .new-policy-form .policy-box .policy-con{
+            width:100%;
+            margin-top:10px;
+        }
+
+        .new-policy-form .policy-box .policy-con .dot-list{
+            width:100%;
+            padding-left:16px;
+        }
+
+        .new-policy-form .policy-box .policy-con .dot-list li{
+            font-size:15px;
+            font-weight:500;
+            color:#000;
+            letter-spacing: -0.4px;
+            position: relative;
+            line-height:1.4;
+            padding-left:10px;
+        }
+
+        .new-policy-form .policy-box .policy-con .dot-list li::before{
+            content:"-";
+            font-size:15px;
+            font-weight:500;
+            color:#000;
+            position: absolute;
+            left:0;
+            top:0;
+            line-height:1.4;
+        }
+
+        .new-policy-form .policy-box .policy-con .dot-list li + li{
+            margin-top:2px;
+        }
+
+        .policy-box .policy-con .policy-table{
+            width:100%;
+            margin-top:30px;
+        }
+
+        .policy-box .policy-con .policy-table table{
+            width:100%;
+        }
+
+        .policy-box .policy-con .policy-table table thead tr th{
+            padding:16px 15px;
+            background:#53b0ae;
+            border:1px solid #53b0ae;
+            border-right:1px solid #fff;
+            text-align: center;
+            font-size:16px;
+            font-weight:500;
+            color:#fff;
+            letter-spacing: -1px;
+        }
+
+        .policy-box .policy-con .policy-table table thead tr th:last-child{
+            border-right:1px solid #53b0ae;
+        }
+
+        .policy-box .policy-con .policy-table table tbody tr td{
+            padding:16px 15px;
+            background:#fff;
+            border:1px solid #bdbdbd;
+            text-align: left;
+            font-size:15px;
+            font-weight:500;
+            color:#222;
+            letter-spacing: -1px;
+            vertical-align: middle;
+            line-height:1.4;
+            word-break: keep-all;
+        }
+
+        .policy-box .policy-con .policy-table table tbody tr td.t-center{
+            text-align: center;
+        }
+
+        .policy-box .policy-con .policy-table table tbody tr td.t-left{
+            text-align: left;
+        }
+
+        .policy-box .policy-con .policy-table table tbody tr td.t-right{
+            text-align: right;
+        }
+
+        .policy-box .policy-con .policy-table table tbody tr td .view-btn{
+            font-size:12px;
+            font-weight:500;
+            color:#666;
+            background:#fff;
+            border:1px solid #c5d1db;
+            border-radius: 4px;
+            padding:3px 5px;
+            letter-spacing: -0.4px;
+            margin-left:10px;
+            display: inline-block;
+        }
+
+        .policy-box .policy-con .policy-table table tbody tr td .view-btn:hover{
+            background:#f5f5f5;
+        }
+
+        .policy-layer-pop{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100vh;
+            background:rgba(0,0,0,0.5);
+            z-index: 999999;
+            padding:20px;
+            box-sizing:border-box;
+            min-width: 768px;
+            display: none;
+        }
+
+        .policy-layer-pop .policy-layer-form{
+            width:100%;
+            height:100%;
+            max-width:1200px;
+            margin:0 auto;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box{
+            width:100%;
+            background:#fff;
+            border-radius: 10px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-header{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            height:60px;
+            border-bottom:1px solid #d3d7dc;
+            padding:0 30px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-header .policy-layer-title{
+            font-size:18px;
+            font-weight:700;
+            color:#1e1e1f;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-header .policy-layer-close-ico{
+            width:15px;
+            border:0;
+            background:none;
+            padding:0;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-header .policy-layer-close-ico img{
+            width:100%;
+            display:block;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-body{
+            padding:20px 30px;
+            max-height:calc( 100vh - 200px );
+            overflow: auto;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-bottom{
+            width:100%;
+            padding-bottom:30px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-bottom .policy-layer-btn-box{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            gap:5px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-bottom .policy-layer-btn-box .btn-new{
+            min-width:80px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-layer-bottom .policy-layer-btn-box .btn-new span{
+            font-size:14px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con{
+            display:none;
+        }
+        
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .title{
+            font-size:16px;
+            font-weight:500;
+            color:#222;
+            letter-spacing: -1px;
+            padding-left:40px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .text-number{
+            padding-left:55px;
+            font-size:15px;
+            font-weight: 500;
+            color:#222;
+            letter-spacing: -1px;
+            margin-top:5px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .text-number + .text-number{
+            margin-top:20px;    
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .policy-box-type{
+            width:100%;
+            border:1px solid #d3d7dc;
+            margin-top:30px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .policy-box-type .box-title{
+            background:#f2f5f7;
+            padding:15px;
+            border-bottom:1px solid #d3d7dc;
+            font-size:14px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#000;
+            text-align: center;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .policy-box-type .box-type-con{
+            width:100%;
+            padding:35px 20px 25px 20px;
+        }
+
+        .policy-layer-pop .btn-new{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            height:40px;
+            border:0px;
+            background:none;
+        }
+
+        .policy-layer-pop .btn-new span{
+            font-size:13px;
+            font-family: 'Noto Sans KR' !important;
+        }
+
+        .policy-layer-pop .btn-focus{
+            background:#00acc1;
+            padding:0 13px;
+        }
+
+        .policy-layer-pop .btn-focus span{
+            color:#ffffff;
+        }
+
+        .policy-layer-pop .btn-white{
+            background:#ffffff;
+            border:1px solid #d3d7dc;
+            padding:0 14px;
+        }
+
+        .policy-layer-pop .btn-white span{
+            color:#505258;
+        }
+
+        .policy-layer-pop .btn-gray{
+            background:#79838f;
+            padding:0 14px;
+        }
+
+        .policy-layer-pop .btn-gray span{
+            color:#fff;
+        }
+
+        .policy-layer-pop .list-num-dot{
+            width:100%;
+            counter-reset: num;
+            list-style: none;
+            padding-left:18px;
+        }
+
+        .policy-layer-pop .list-num-dot li.num-dot-txt{
+            counter-increment: num;
+            padding-left:14px;
+            position: relative;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .policy-layer-pop .list-num-dot li.num-dot-txt::before{
+            content: counter(num) ". ";
+            position: absolute;
+            left: 0;
+             font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .policy-layer-pop .list-num-dot li + li{
+            margin-top:25px;
+        }
+
+        .policy-layer-pop .list-txt-dot{
+            counter-reset: ga;
+            list-style: none;
+            padding-left: 0;
+            margin-top: 25px;
+        }
+
+        .policy-layer-pop .list-txt-dot li.txt-dot-txt{
+            position: relative;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+            padding-left:20px;
+        }
+
+        .policy-layer-pop .list-txt-dot li.txt-dot-txt::before{
+            position: absolute;
+            left: 0;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .policy-layer-pop .list-txt-dot li + li{
+            margin-top:5px;
+        }
+
+        /* lower-korean 미지원 */
+        .policy-layer-pop .list-txt-dot > li.txt-dot-txt:nth-child(1)::before{
+            content: "가. ";
+            position: absolute;
+            left: 0;
+        }
+        .policy-layer-pop .list-txt-dot > li.txt-dot-txt:nth-child(2)::before{
+            content: "나. ";
+            position: absolute;
+            left: 0;
+        }
+        .policy-layer-pop .list-txt-dot > li.txt-dot-txt:nth-child(3)::before{
+            content: "다. ";
+            position: absolute;
+            left: 0;
+        }
+        .policy-layer-pop .list-txt-dot > li.txt-dot-txt:nth-child(4)::before{
+            content: "라. ";
+            position: absolute;
+            left: 0;
+        }
+        .policy-layer-pop .list-txt-dot > li.txt-dot-txt:nth-child(5)::before{
+            content: "마. ";
+            position: absolute;
+            left: 0;
+        }
+
+        .tbl-txt-num{
+            position: relative;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+            padding-left:20px;
+        }
+
+        .tbl-txt-num::before{
+            position: absolute;
+            left: 0;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .tbl-txt-num.nun01::before{
+            content: "가. ";
+            position: absolute;
+            left: 0;
+        }
+
+        .tbl-txt-num.nun02::before{
+            content: "나. ";
+            position: absolute;
+            left: 0;
+        }
+
+        .tbl-txt-num.nun03::before{
+            content: "다. ";
+            position: absolute;
+            left: 0;
+        }
+
+        .tbl-txt-num.nun04::before{
+            content: "라. ";
+            position: absolute;
+            left: 0;
+        }
+
+        .tbl-txt-num.nun05::before{
+            content: "마. ";
+            position: absolute;
+            left: 0;
+        }
+
+        .policy-layer-pop .tbl-num-list{
+            width:100%;
+            counter-reset: num;
+            list-style: none;
+        }
+
+        .policy-layer-pop .tbl-num-list li.num-list-con{
+            counter-increment: num;
+            padding-left:16px;
+            position: relative;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .policy-layer-pop .tbl-num-list li.num-list-con::before{
+            content: counter(num) ") ";
+            position: absolute;
+            left: 0;
+             font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .policy-layer-pop .tbl-num-list li.num-list-con + .num-list-con{
+            margin-top:20px;
+        }
+
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list{
+            margin-top:20px;
+        }
+
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list li.txt-list-con{
+            position: relative;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+            padding-left:20px;
+        }
+
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list li.txt-list-con::before{
+            position: absolute;
+            left: 0;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list li + li{
+            margin-top:5px;
+        }
+
+        /* lower-korean 미지원 */
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list li.txt-list-con:nth-child(1)::before{
+            content: "가) ";
+            position: absolute;
+            left: 0;
+        }
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list li.txt-list-con:nth-child(2)::before{
+            content: "나) ";
+            position: absolute;
+            left: 0;
+        }
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list li.txt-list-con:nth-child(3)::before{
+            content: "다) ";
+            position: absolute;
+            left: 0;
+        }
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list li.txt-list-con:nth-child(4)::before{
+            content: "라) ";
+            position: absolute;
+            left: 0;
+        }
+        .policy-layer-pop .tbl-num-list li.num-list-con .tbl-txt-list li.txt-list-con:nth-child(5)::before{
+            content: "마) ";
+            position: absolute;
+            left: 0;
+        }
+
+        .policy-layer-pop .tbl-sub-num-list{
+            margin:20px 0;
+        }
+
+        .policy-layer-pop .tbl-sub-num-list{
+            width:100%;
+            counter-reset: subNum;
+            list-style: none;
+        }
+
+        .policy-layer-pop .tbl-sub-num-list li.sub-num-con{
+            counter-increment: subNum;
+            padding-left:12px;
+            position: relative;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .policy-layer-pop .tbl-sub-num-list li.sub-num-con::before{
+            content: "(" counter(subNum) ")";
+            position: absolute;
+            top:-1px;
+            left: 0;
+            font-size:15px;
+            font-weight:500;
+            letter-spacing: -1px;
+            color:#222;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .policy-box-type + .text-number{
+            margin-top:30px;
+        } 
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .dot-list{
+            width:100%;
+            padding-left:16px;
+            margin-top:5px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .dot-list li{
+            font-size:15px;
+            font-weight:500;
+            color:#000;
+            letter-spacing: -0.4px;
+            position: relative;
+            line-height:1.4;
+            padding-left:10px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .dot-list li::before{
+            content:"-";
+            font-size:15px;
+            font-weight:500;
+            color:#000;
+            position: absolute;
+            left:0;
+            top:0;
+            line-height:1.4;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .dot-list li + li{
+            margin-top:2px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con  .policy-table + .text-number{
+            margin-top:30px;
+        }
+
+        .policy-layer-pop .policy-layer-form .policy-layer-box .policy-pop-con .text-number .list-txt-dot{
+            padding-left:10px;
+            margin:10px 0;
+        }
+
+        .policy-layer-pop .list-cont .list-num-dot{
+            padding-left:52px;
+            margin-top:10px;
+        }
+
+        .policy-layer-pop .list-cont .list-num-dot li + li{
+            margin-top:5px;
+        }
+
+        /* E: 해당 영역 적용 */
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="resources/images/sample/ecoas_header.png"/>
+    </header>
+
+    <div class="container">
+        <div class="contents">
+            <div class="cont">
+                <!-- S : 해당 영역 적용  -->
+                <div class="new-policy-title">
+                    회수ㆍ인계ㆍ재활용의무 대상 전기ㆍ전자제품(제15조 본문 관련)
+                </div>
+
+                <div class="new-policy-form">
+                    <div class="policy-gray-box">
+                        전기·전자제품 및 자동차의 자원순환에 관한 법률 시행령 제14조(회수ㆍ인계ㆍ재활용의무 대상 전기ㆍ전자제품) [시행일: 2026. 1. 1 ]<br>
+                        유해물질 사용제한 대상 및 회수ㆍ인계ㆍ재활용의무 대상에서 제외되는 전기ㆍ전자제품 [기후에너지환경부고시 제2025-68호 2025.12.26.][시행일: 2026. 1. 1 ]
+                    </div>
+
+                    <div class="policy-box">
+                        <div class="policy-title">
+                            회수ㆍ인계ㆍ재활용 대상 전기ㆍ전자제품
+                        </div>
+                        <div class="policy-con">
+                            <ul class="dot-list">
+                                <li>직류(DC) 1,500V 이하 또는 교류(AC) 1,000V 이하의 전압에서 사용하는 전기ㆍ전자제품</li>
+                                <li>전기ㆍ전자제품의 제품군 분류</li>
+                            </ul>
+
+                            <div class="policy-table">
+                                <table>
+                                    <colgroup>
+                                        <col width="195px"/>
+                                        <col width=""/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>제품군</th>
+                                            <th>대상 제품</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="2">
+                                                1. 특정 재활용 대상 제품
+                                            </td>
+                                            <td>
+                                                가. 냉장고, 에어컨 등 냉매를 포함하는 기기
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                나. 세탁기, 러닝머신, 전기안마기
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="4">
+                                                2. 일반 재활용 대상 제품
+                                            </td>
+                                            <td>
+                                                가. 디스플레이기기 (100㎠ 이상의 화면을 포함하는 기기만 해당)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                나. 이동전화단말기
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                다. 통신·사무기기
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                라. 그 밖의 일반 전기 · 전자제품
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                3. 태양광 패널
+                                            </td>
+                                            <td>
+                                                태양광 패널
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="policy-box">
+                        <div class="policy-title">
+                            회수ㆍ인계ㆍ재활용의무 대상에서 제외되는 전기ㆍ전자제품(시행령 제14조제1항)
+                        </div>
+                        <div class="policy-con">
+                            <div class="policy-table">
+                                <table>
+                                    <colgroup>
+                                        <col width="195px"/>
+                                        <col width="195px"/>
+                                        <col width=""/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">제외 대상</th>
+                                            <th>관련 규정</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- 운송 수단 -->
+                                        <tr>
+                                            <td rowspan="7">1. 운송수단 등</td>
+                                            <td class="t-center">
+                                                자동차<br>원동기장치자전거
+                                            </td>
+                                            <td>
+                                                「도로교통법」 제2조제21호<br>
+                                                ※개인형 이동장치는 의무대상임(「도로교통법」제2조제19호의2)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-center">
+                                                철도
+                                            </td>
+                                            <td>
+                                                「철도산업발전기본법」 제3조제1호
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-center">
+                                                도시철도
+                                            </td>
+                                            <td>
+                                                「도시철도법」 제2조제2호
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-center">
+                                                궤도
+                                            </td>
+                                            <td>
+                                                「궤도운송법」 제2조제1호
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-center">
+                                                선박 
+                                            </td>
+                                            <td>
+                                                「해사안전기본법」 제3조제2호
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-center">
+                                                항공기
+                                            </td>
+                                            <td>
+                                                「항공안전법」 제2조제1호
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-center">
+                                                우주비행체
+                                            </td>
+                                            <td>
+                                                「항공우주산업개발 촉진법」 제2조제3호
+                                            </td>
+                                        </tr>
+
+                                        <!-- 군수품 -->
+                                        <tr>
+                                            <td rowspan="2">2. 군수품</td>
+                                            <td class="t-center">
+                                                군수품
+                                            </td>
+                                            <td>
+                                                「군수품관리법」
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-center">
+                                                국가 안보 목적
+                                            </td>
+                                            <td>
+                                                기후에너지환경부 고시(제2025-68호) ①
+                                                <button type="button" class="view-btn" data-value="policy01" >상세보기</button>
+                                            </td>
+                                        </tr>
+
+                                        <!-- 산업기기 -->
+                                        <tr>
+                                            <td colspan="2">3. 산업기기 및 대형고정설비</td>
+                                            <td>
+                                                기후에너지환경부 고시(제2025-68호) ②
+                                                <button type="button" class="view-btn" data-value="policy02" >상세보기</button>
+                                            </td>
+                                        </tr>
+
+                                        <!-- 의료기기 -->
+                                        <tr>
+                                            <td colspan="2">3. 의료기기</td>
+                                            <td>
+                                                기후에너지환경부 고시(제2025-68호) ③
+                                                <button type="button" class="view-btn" data-value="policy03" >상세보기</button>
+                                            </td>
+                                        </tr>
+
+                                        <!-- 전지류 -->
+                                        <tr>
+                                            <td colspan="2">5. 전지류 및 조명제품 </td>
+                                            <td>
+                                                「자원재활용법」 시행령 제18조제4호(전지류), 제7호(형광등, LED조명)
+                                            </td>
+                                        </tr>
+
+                                        <!-- 기타 -->
+                                        <tr>
+                                            <td colspan="2">6. 기타</td>
+                                            <td>
+                                                기후에너지환경부 고시(제2025-68호) ④
+                                                <button type="button" class="view-btn" data-value="policy04" >상세보기</button>
+                                            </td>
+                                        </tr>
+
+                                        <!-- 부속품ㆍ부분품 -->
+                                        <tr>
+                                            <td colspan="2">7. 부속품ㆍ부분품</td>
+                                            <td>
+                                                상기 1~6호 해당하는 제품의 제조 단계에서 장착되도록 설계된 것으로서 해당<br>
+                                                제품의 일부로만 기능할 수 있는 부속품ㆍ부분품에 해당하는 전기ㆍ전자제품
+                                            </td>
+                                        </tr>   
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- S : 팝업 -->
+                <div class="policy-layer-pop" id="policyPop">
+                    <div class="policy-layer-form">
+                        <div class="policy-layer-box">
+                            <div class="policy-layer-header">
+                                <div class="policy-layer-title">
+                                    기후에너지환경부 고시(제2025-68호) 
+                                </div>
+                                <button onclick="layerClose();" type="button" class="policy-layer-close-ico">
+                                    <img src="resources/images/contents/layer_close_ico.png"/>
+                                </button>
+                            </div>
+                            <div class="policy-layer-body">
+                                <!-- S: 1번 내용 -->
+                                <div class="policy-pop-con" data-box="policy01">
+                                    <div class="policy-box">
+                                        <div class="policy-con">
+                                            <div class="title">
+                                                ①&nbsp;&nbsp;군수품 및 국가안보 제품 (시행령 제14조제1항제2호)
+                                            </div>
+                                            <div class="policy-table">
+                                                <table>
+                                                    <colgroup>
+                                                        <col width="390px"/>
+                                                        <col width=""/>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>제외 대상</th>
+                                                            <th>관련 근거</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>전비품(戰備品)</td>
+                                                            <td>
+                                                                「군수품관리법」 제3조 및 같은 법 시행령 제1조의2제1항
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>국가 안보 목적</td>
+                                                            <td>
+                                                                「행정기관의 조직 및 정원에 관한 통칙」 제2조제1호부터 제3호의
+                                                                 규정에 따른 행정기관에서 사용
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- E: 1번 내용 -->
+
+                                <!-- S: 2번 내용 -->
+                                <div class="policy-pop-con" data-box="policy02">
+                                    <div class="policy-box">
+                                        <div class="policy-con">
+                                            <div class="title">
+                                                ②&nbsp;&nbsp;산업기기 및 대형고정 설비 (시행령 제14조제1항제3호) 
+                                            </div>
+                                            <div class="text-number">
+                                                1. 인정 기준을 충족하는 대형고정식 산업기기 및 대형고정설비
+                                            </div>
+
+                                            <div class="policy-box-type">
+                                                <div class="box-title">
+                                                    대형고정식 산업기기 및 대형고정설비의 인정기준
+                                                </div>
+                                                <div class="box-type-con">
+                                                    <ul class="list-num-dot">
+                                                        <li class="num-dot-txt">
+                                                            다음의 조건을 모두 충족하는 전기ㆍ전자제품을 대형고정식 산업기기 및 대형고정설비(이하 "대형기기ㆍ설비"라 한다)로 인정한다.
+                                                            <ul class="list-txt-dot">
+                                                                <li class="txt-dot-txt">여러 종류의 기구나 장치를 서로 조립 또는 결합하여 하나의 기기나 설비로 제작됨</li>
+                                                                <li class="txt-dot-txt">대형기기ㆍ설비를 조립, 설치 및 해체하기 위해서는 관련 전문가의 작업이 필요</li>
+                                                                <li class="txt-dot-txt">일정한 공간에 고정적으로 설치하여 사용하는 기기나 설비</li>
+                                                                <li class="txt-dot-txt">대형고정설비의 경우 동일하게 제작된 특수기기로만 교체가 가능한 경우에 인정</li>
+                                                                <li class="txt-dot-txt">기업간 거래(B2B)인 경우</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="num-dot-txt">
+                                                            대형기기ㆍ설비의 인정에 필요한 세부적인 기준은 다음과 같다.
+                                                        </li>
+                                                    </ul>
+
+                                                    <div class="policy-table">
+                                                        <table>
+                                                            <colgroup>
+                                                                <col width="185px"/>
+                                                                <col width=""/>
+                                                            </colgroup>
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>제외 대상</th>
+                                                                    <th>관련 근거</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="tbl-txt-num nun01">
+                                                                            여러 종류의 기구나 장치를 서로 조립 또는 결합하여 하나의 기기나 설비로 제작
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <ul class="tbl-num-list">
+                                                                            <li class="num-list-con">
+                                                                                대형고정식 산업기기 : 중량이 2톤 이상이고 크기가 15.625㎥ 이상(예시: 2.5m × 2.5m × 2.5m)인 기기
+                                                                            </li>
+                                                                            <li class="num-list-con">
+                                                                                대형고정설비 : 다음의 어느 하나에 해당하는 것으로서 설치를 위한 지반보강공사, 인입공사 등의 구조물 개선 작업이 수반되는 설비
+                                                                                <ul class="tbl-txt-list">
+                                                                                    <li class="txt-list-con">
+                                                                                        설치 또는 해체를 위해 운반할 때 부분품의 총합이 ISO20 컨테이너(5.9m × 2.35m × 2.39m)보다 큼
+                                                                                    </li>
+                                                                                    <li class="txt-list-con">
+                                                                                        설치 또는 해체를 위한 운반시 대형화물트럭(25톤) 1대를 초과
+                                                                                    </li>
+                                                                                    <li class="txt-list-con">
+                                                                                        설치 또는 해체를 위해서는 다음의 어느 하나에 해당하는 대형크레인이 필요
+
+                                                                                        <ul class="tbl-sub-num-list ">
+                                                                                            <li class="sub-num-con">
+                                                                                                「건설기계관리법 시행령」 별표 1 제7호의 기중기로서 들어올림능력이 25톤 이상이고 작업반경이 12미터를 초과하는 것
+                                                                                            </li>
+                                                                                            <li class="sub-num-con">
+                                                                                                「건설기계관리법 시행령」 별표 1 제27호의 타워크레인으로서 최대정격하중이 25톤 이상이고 작업반경이 12미터를 초과하는 것
+                                                                                            </li>
+                                                                                            <li class="sub-num-con">
+                                                                                                「자동차관리법 시행규칙」 별표 1 제2호의 화물자동차(특수용도형)에 크레인 장치를 부착한 경우 들어올림능력이 25톤 이상인 것
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                    <li class="txt-list-con">
+                                                                                        제품의 정격출력이 375kW 이상
+                                                                                    </li>
+
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="tbl-txt-num nun02">
+                                                                            대형기기·설비를 조립, 설치 및 해체하기 위해서는 관련 전문가의 작업이 필요
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <ul class="tbl-num-list">
+                                                                            <li class="num-list-con">
+                                                                                관련 전문가란 해당 작업을 수행하기에 적합한 훈련을 받았거나 숙련된 기술자
+                                                                            </li>
+                                                                            <li class="num-list-con">
+                                                                                조립, 설치 및 해체 작업에 각각 동등한 수준의 숙련된 기술을 필요로 하는 경우를말하며, <br>철거업체에 의한 해체의 경우는 인정하지 않음
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="tbl-txt-num nun03">
+                                                                            일정한 공간에 고정적으로 설치하여 사용
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <ul class="tbl-num-list">
+                                                                            <li class="num-list-con">
+                                                                                건축물이나 구조물에 고정적으로 설치하여 지속적으로 사용하기 위한 기기나 설비
+                                                                            </li>
+                                                                            <li class="num-list-con">
+                                                                                제품의 기능 구현 등을 위해 최초 설치장소에서 이동하게 되는 경우에는 고정적으로 설치된 것으로 볼 수 없음. 다만, <br>작업의 특수성에 따라 고정된 레일 위에서 이동하는 등의 이동성을 갖춘 경우에는 고정된 것으로 인정
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="tbl-txt-num nun04">
+                                                                            대형고정설비의 경우 동일 하게 제작된 특수기기로만 교체가 가능한 경우
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <ul class="tbl-num-list">
+                                                                            <li class="num-list-con">
+                                                                                교체가 필요한 경우 특별히 맞춤식(설계, 크기, 구조 등)으로 제작되어야 하며,
+                                                                            </li>
+                                                                            <li class="num-list-con">
+                                                                                표준화 제품이거나 맞춤식으로 제작되지 않은 제품(a)이 제외대상에 해당하는 대형<br>
+                                                                                기기·설비(b)에 결합될 경우, 해당 제품(a)은 대형기기·설비의 예외로 인정하지 않음
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="tbl-txt-num nun05">
+                                                                            기업간 거래 <br>(B2B)인 경우
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <ul class="tbl-num-list">
+                                                                            <li class="num-list-con">
+                                                                                기업간 거래(B2B)인 경우에만 해당하며, 기업과 소비자간 거래(B2C) 형태의 기기나 그 부품은 해당하지 않음
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="text-number">
+                                                2. 건축물 또는 시설물의 일부로서 영구적 사용을 목적
+                                                <ul class="dot-list">
+                                                    <li>전문공사업자가 설치하고 해당 건축물 또는 시설물을 철거ㆍ해체(멸실공사 포함)해야만 회수ㆍ재활용이 가능한 기계류(기계ㆍ기기ㆍ기구, 장비, 설비 및 기자재 등)</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="policy-table">
+                                                <table>
+                                                    <colgroup>
+                                                        <col width="195px"/>
+                                                        <col width=""/>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>기기류</th>
+                                                            <th>관련 내용</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="tbl-txt-num nun01">
+                                                                    기계설비
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                「기계설비법」 제2조제1호 및 같은 법 시행령 제2조<br>
+                                                                ※ 다만, 에어컨디셔너(벽걸이, 스탠드형), 공기청정기는 의무대상제품에 해당(제외되지않음)
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="tbl-txt-num nun02">
+                                                                    전기설비
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                「전기공사업법」 제2조제1호 및 같은 법 시행령 제2조제2항에 따른 전기공사
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="tbl-txt-num nun03">
+                                                                    소방시설
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                「소방시설 설치 및 관리에 관한 법률」 제2조제1항제1호 및 같은 법 시행령 제3조
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                <div class="tbl-txt-num nun04">
+                                                                    정보통신설비
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                「정보통신공사업법」 제2조제2호 및 같은 법 시행령 제2조제1항에 따른 정보통신설비의 설치 및 유지ㆍ보수 및 부대공사로 설치
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="text-number">
+                                                3. 해당 업 사업자가 처리의 책임이 있다고 판단되는 전기ㆍ전자제품
+                                            </div>
+
+                                            <div class="policy-table">
+                                                <table>
+                                                    <colgroup>
+                                                        <col width="195px"/>
+                                                        <col width=""/>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>전기ㆍ전자제품(업종)</th>
+                                                            <th>관련 내용</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="tbl-txt-num nun01">
+                                                                    건설기계(건설업)
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                「건설기계관리법」 제2조제1항제1호 및 같은 법 시행령 제2조
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="tbl-txt-num nun02">
+                                                                    농업기계(농업)
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                「농업기계화 촉진법」 제2조제1호 및 같은 법 시행규칙 제1조의2
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td rowspan="4">
+                                                                <div class="tbl-txt-num nun03">
+                                                                    제조설비(제조업)
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                유해위험방지계획서 제출 대상 기계ㆍ기구 및 설비 &nbsp; - 「산업안전보건법」 제42조제1항제1호 및 같은 법 시행령 제42조제2항
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                안전인증대상 기계 &nbsp; - 「산업안전보건법」 제84조제1항 및 동법 시행령 제74조
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                자율안전확인대상 기계 &nbsp; - 「산업안전보건법」 제89조제1항 및 동법 시행령 제77조
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                공장등록대장의 기계장치 &nbsp; - 「산업접적법」 제16조제1항 및 같은법 시행규칙 제10조제1항
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="tbl-txt-num nun04">
+                                                                    방사선발생장치
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                「원자력안전법」제2조제9호
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <div class="tbl-txt-num nun05">
+                                                                    전문적인 용도로 작업장 내에서만 사용되는 비도로용 이동기계
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="text-number">
+                                                4. 기초과학연구에 사용되는 시험ㆍ측정ㆍ분석 장비(다음 요건을 모두 충족)
+                                                <ul class="list-txt-dot">
+                                                    <li class="txt-dot-txt">기관 또는 단체가 사용하는 국가연구시설장비 표준분류체계에 해당하는 연구 장비 (「기초연구진흥 및 기술개발지원에 관한 법률」제14조제1항에 따른 기관 또는 단체) </li>
+                                                    <li class="txt-dot-txt">연구 및 시험 외의 용도로 독립적으로 사용되지 않는 장비</li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="text-number">
+                                                5. 연구용 제품의 견본품 또는 연구개발 과정에서 제작되는 시제품 (상업적으로 판매되거나 일반소비자용으로 제공되지 않는 경우로 한정)
+                                            </div>
+
+                                            <div class="text-number">
+                                                6. 비상업적 목적으로 수입해 자체 사무실 등에 직접 사용하는 제품 (상업적으로 판매되거나 일반 소비자용으로 제공되지 않는 경우로 한정)
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- E: 2번 내용 -->
+
+                                <!-- S: 3번 내용 -->
+                                <div class="policy-pop-con" data-box="policy03">
+                                    <div class="policy-box">
+                                        <div class="policy-con">
+                                            <div class="title">
+                                                ③&nbsp;&nbsp;재활용 과정 중 감염의 우려로 제외되는 의료기기 (시행령 제14조제1항제4호)
+                                            </div>
+                                            <div class="policy-table">
+                                                <table>
+                                                    <colgroup>
+                                                        <col width="390px"/>
+                                                        <col width=""/>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>의료기기</th>
+                                                            <th>관련 근거</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>생물학적 안전에 관한 자료 제출 대상</td>
+                                                            <td>
+                                                                「의료기기 허가ㆍ신고ㆍ심사 등에 관한 규정(식품의약품안전처고시)」 제26조제1항제4호나목
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                3등급(중증도의 잠재적 위해성)<br>
+                                                                4등급(고도의 위해성)
+                                                            </td>
+                                                            <td>
+                                                                「의료기기 품목 및 품목별 등급에 관한 규정(식품의약품안전처고시)」, <br>
+                                                                「체외진단형 의료기기품목 및 품목별 등급에 관한 규정(식품의약품안전처고시)」
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- E: 3번 내용 -->
+
+                                <!-- S: 4번 내용 -->
+                                <div class="policy-pop-con" data-box="policy04">
+                                    <div class="policy-box">
+                                        <div class="policy-con">
+                                            <div class="title">
+                                                ④&nbsp;&nbsp;일반적인 전기ㆍ전자제품과 다르게 취급 (시행령 제14조제1항제6호)
+                                            </div>
+                                            <div class="list-cont">
+                                                <ul class="list-num-dot">
+                                                    <li class="num-dot-txt">
+                                                        주기능이 전기ㆍ전자제품이 아닌 제품(가구류, 신발류 등)의 일부를 구성하는 전기ㆍ전자제품 (※ 안마의자는 의무대상임)
+                                                    </li>
+                                                    <li class="num-dot-txt">
+                                                        수리 및 교체 등을 위해 별도로 판매하는 부분품 및 부속품
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- E: 4번 내용 -->
+                            </div>
+                            <div class="policy-layer-bottom">
+                                <div class="policy-layer-btn-box">
+                                    <button class="btn-new btn-gray" type="button" onclick="layerClose();">
+                                        <span>닫기</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- E : 팝업 -->
+
+                <!-- E : 해당 영역 적용 -->
+            </div>
+            
+        </div>
+    </div>
+
+    <footer>
+        <img src="resources/images/sample/ecoas_footer.png"/>
+    </footer>
+</body>
+
+<script>
+    /* S: 스크립트 영역 모두 적용 */
+    $(document).ready(function(){
+        $(".view-btn").click(function(){
+            var thisValue = $(this).data("value");
+
+            $(".policy-pop-con").hide();
+            $('.policy-pop-con[data-box="' + thisValue + '"]').show();
+            $("#policyPop").fadeIn();
+
+
+        });
+    });
+
+    function layerClose(){
+        $(".policy-layer-pop").fadeOut();
+    }
+    /* E: 스크립트 영역 모두 적용 */
+</script>
+
+</html>
